@@ -9,9 +9,9 @@
 }
 .slider img {
   width: 100%;
-  height: 500px;
+  height: 550px;
   overflow: hidden;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 /* Header */

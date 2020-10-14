@@ -6,7 +6,7 @@ import './style.css'
 
 import img1 from "../../images/poster1.jpg";
 import img2 from "../../images/poster2.jpg";
-import img4 from "../../images/poster4.webp";
+import img4 from "../../images/poster4.jpg";
 import img5 from "../../images/poster5.jpg";
 import img6 from "../../images/poster6.jpg";
 import img3 from "../../images/poster7.jpg";
