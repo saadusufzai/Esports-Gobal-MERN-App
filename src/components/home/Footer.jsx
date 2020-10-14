@@ -5,49 +5,31 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="inner-footer">
+        <div className="about">
+            <h3>About Us</h3>
+            <p>
+            Esports Global is an Esports Company that organize online tournaments and events to boost and support the rising gamming cmmunity of Pakitan.
+            </p>
+        </div>
+
         <div>
           <ul className='links' >
             <h4>Links</h4>
             <li>
-              <a href="/">HOME</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/About">About</a>
             </li>
             <li>
-              <a href="/Tournaments">TOURNAMENTS</a>
+              <a href="/Tournaments">Tournaments</a>
             </li>
             <li>
               <a href="/Login">Login/Register</a>
             </li>
           </ul>
         </div>
-        <div className="follow-us">
-          <h3>Follow Us</h3>
-          <ul>
-            <li>
-              <a href="#">
-                <i style={{}}  class=" fb fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i class="insta fa fa-instagram fa-2x" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i class=" yt fa fa-youtube-play fa-2x" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i class="wa fa fa-whatsapp fa-2x" aria-hidden="true"></i>
-                
-              </a>
-            </li>
-          </ul>
-        </div>
+        
         <div className="contact">
           <ul>
             <h4>Contact Us</h4>

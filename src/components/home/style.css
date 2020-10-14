@@ -1,8 +1,8 @@
 /* slider */
 :root {
-    --primary: black;
-    --secondary: rgb(255, 145, 0);
-  }
+  --primary: black;
+  --secondary: rgb(255, 145, 0);
+}
 .slider {
   width: 100%;
   overflow: hidden;
@@ -41,131 +41,141 @@
 
 .header .menu ul a {
   text-decoration: none;
-  color:var(--primary);
+  color: var(--primary);
   font-size: 16px;
   font-weight: 500;
   transition: color ease-in-out 300ms;
 }
 
-.header .menu ul a:hover{
-    color: var(--secondary);
+.header .menu ul a:hover {
+  color: var(--secondary);
 }
 
 /* LiveStream */
-.live{
-    width: 80vw;
-    margin: 20px auto;
-    
-    overflow: hidden;
+.live {
+  width: 80vw;
+  margin: 20px auto;
+
+  overflow: hidden;
 }
 
-h1{
-    text-transform: uppercase;
-    color: var(--secondary);
-    padding: 20px;
-    text-align: center;
+h1 {
+  text-transform: uppercase;
+  color: var(--secondary);
+  padding: 20px;
+  text-align: center;
 }
 
-iframe{    
-    width: 80vw;
-    height: 500px;
-    
-
+iframe {
+  width: 80vw;
+  height: 500px;
 }
 
 /* Footer */
 
-
-footer{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: var(--secondary);
+footer {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--secondary);
 }
 
-.inner-footer{
-    width: 80%;
-    
-    margin: 0  auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
+.inner-footer {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 .inner-footer ul {
-    list-style: none;
+  list-style: none;
+}
+.inner-footer ul li {
+  margin: 15px 0;
+}
+.inner-footer ul li a {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 400;
+  transition: color 300ms ease-in-out;
+  text-transform: unset;
+}
+.inner-footer .links li a:hover {
+  color: #fff;
+}
 
+.inner-footer .about h3{
     
+    margin-bottom: 15px ;
 }
-.inner-footer ul li{
-    margin: 15px 0;
-    
-}
-.inner-footer ul li a{
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: 400;
-    transition: color 300ms ease-in-out;
-    text-transform: uppercase;
-}
-.inner-footer .links li a:hover{
-    color: #fff;
-    
-
-}
-
-.inner-footer .follow-us ul  {
-    width: 150px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-    
-}
-.inner-footer .follow-us ul li a i {
-    margin-right: 10px;
-    transition: color 300ms ease-in-out;
-}
-
-.inner-footer .contact i{
-    margin-right: 8px;
+.inner-footer .about p{
+    width: 80%;
 }
 
 
-.copyright{
 
-    color: #fff;
-    padding: 15px;
-    background-color: black;
-    text-align: center;
-    font-size: 14px;
+.inner-footer .contact i {
+  margin-right: 8px;
 }
-.copyright a{
-    margin-left: 5px;
-    text-decoration: none;
-    color: var(--secondary);
-    font-weight: 400;
-    transition: color 300ms ease-in-out;
-   
+
+.copyright {
+  color: #fff;
+  padding: 15px;
+  background-color: black;
+  text-align: center;
+  font-size: 14px;
+}
+.copyright a {
+  margin-left: 5px;
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 400;
+  transition: color 300ms ease-in-out;
 }
 /* social media hover color */
 
-.fb:hover{
-    color:#3b5998;
+.fb:hover {
+  color: #3b5998;
 }
-.insta:hover{
-    color: #8134AF 
+.insta:hover {
+  color: #8134af;
 }
-.yt:hover{
-    color:#da0700
-    
+.yt:hover {
+  color: #da0700;
 }
-.wa:hover{
-    color:#30b43f;
+.wa:hover {
+  color: #30b43f;
+}
+
+.copyright a:hover {
+  color: #fff;
 }
 
 
-.copyright a:hover{
-    color: #fff
+/* Social */
+
+.follow-us{
+    background-color: #000000;
+    color: #fff;
+    padding: 50px;
+}
+
+ .follow-us ul {
+    width: 60%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+   .follow-us ul li a i {
+    margin-right: 10px;
+    transition: color 300ms ease-in-out;
+  }
+
+.follow-us i{
+    color: #fff;
 }
