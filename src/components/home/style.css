@@ -25,6 +25,7 @@
 .header .logo img {
   width: 130px;
   padding: 5px;
+  margin-left: 8px;
 }
 
 .header .menu ul {
@@ -53,8 +54,8 @@
 /* LiveStream */
 .live{
     width: 80vw;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto;
+    
     overflow: hidden;
 }
 
@@ -70,4 +71,66 @@ iframe{
     height: 500px;
     
 
+}
+
+/* Footer */
+
+
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--secondary);
+}
+
+.inner-footer{
+    width: 80%;
+    
+    margin: 0  auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.inner-footer ul {
+    list-style: none;
+
+    
+}
+.inner-footer ul li{
+    margin: 15px 0;
+}
+.inner-footer ul li a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 400;
+    transition: color 300ms ease-in-out;
+    text-transform: uppercase;
+}
+.inner-footer ul li a:hover{
+    color: #fff
+
+}
+
+.copyright{
+
+    color: #fff;
+    padding: 15px;
+    background-color: black;
+    text-align: center;
+    font-size: 14px;
+}
+.copyright a{
+    margin-left: 5px;
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 400;
+    transition: color 300ms ease-in-out;
+   
+}
+
+.copyright a:hover{
+    color: #fff
 }
