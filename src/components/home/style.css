@@ -1,0 +1,73 @@
+/* slider */
+:root {
+    --primary: black;
+    --secondary: rgb(255, 145, 0);
+  }
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+.slider img {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo img {
+  width: 130px;
+  padding: 5px;
+}
+
+.header .menu ul {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  margin-right: 50px;
+}
+
+.header .menu ul li {
+  margin-left: 40px;
+}
+
+.header .menu ul a {
+  text-decoration: none;
+  color:var(--primary);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color ease-in-out 300ms;
+}
+
+.header .menu ul a:hover{
+    color: var(--secondary);
+}
+
+/* LiveStream */
+.live{
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+h1{
+    text-transform: uppercase;
+    color: var(--secondary);
+    padding: 20px;
+    text-align: center;
+}
+
+iframe{    
+    width: 80vw;
+    height: 500px;
+    
+
+}
