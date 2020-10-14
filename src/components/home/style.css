@@ -101,6 +101,7 @@ footer{
 }
 .inner-footer ul li{
     margin: 15px 0;
+    
 }
 .inner-footer ul li a{
     text-decoration: none;
@@ -109,10 +110,28 @@ footer{
     transition: color 300ms ease-in-out;
     text-transform: uppercase;
 }
-.inner-footer ul li a:hover{
-    color: #fff
+.inner-footer .links li a:hover{
+    color: #fff;
+    
 
 }
+
+.inner-footer .follow-us ul  {
+    width: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+}
+.inner-footer .follow-us ul li a i {
+    margin-right: 10px;
+    transition: color 300ms ease-in-out;
+}
+
+.inner-footer .contact i{
+    margin-right: 8px;
+}
+
 
 .copyright{
 
@@ -130,6 +149,21 @@ footer{
     transition: color 300ms ease-in-out;
    
 }
+/* social media hover color */
+
+.fb:hover{
+    color:#3b5998;
+}
+.insta:hover{
+    color: #8134AF 
+}
+.yt:hover{
+    color:#da0700
+}
+.wa:hover{
+    color:#30b43f;
+}
+
 
 .copyright a:hover{
     color: #fff
