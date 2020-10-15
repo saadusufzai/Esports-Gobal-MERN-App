@@ -13,7 +13,6 @@ const Home = () => {
       <Events />
       <LiveStream />
       <Social />
-      <Footer />
     </div>
   );
 };

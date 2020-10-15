@@ -1,0 +1,82 @@
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+.register {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: 100vh;
+
+  .left {
+    background: linear-gradient(rgb(221, 29, 4), rgb(247, 100, 100), orange);
+  }
+
+  .right {
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+      margin-bottom: 5px;
+    }
+    p {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+
+      input,
+      select {
+        padding: 15px 20px;
+        margin-bottom: 20px;
+      }
+
+
+      .btn {
+        width: 100%;
+        padding: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        user-select: none;
+      }
+      .btn:focus{
+          border: none;
+        outline: none;
+      }
+      .back {
+        background-color: #fff;
+        color: #000;
+        box-shadow: none;
+        transition: all 300ms ease-in-out;
+      }
+      .back:hover {
+        background-color: rgb(143, 143, 143);
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.checkbox{
+ margin: 20px 0;
+ input{
+     margin-right: 8px;
+     
+ }   
+ label{
+     font-size: 14px;
+     a{
+         color:rgb(253, 122, 0);
+         text-decoration: none;
+     }
+ }    
+}

@@ -31,6 +31,7 @@
 .header .menu ul {
   display: flex;
   list-style: none;
+  align-items: center;
   text-transform: uppercase;
   margin-right: 50px;
 }
@@ -178,4 +179,20 @@ footer {
 
 .follow-us i{
     color: #fff;
+}
+
+.btn{
+    
+  background-color: var(--secondary);
+  width: 30%;
+  text-align: center;
+  padding: 10px 15px;
+  color: #FFF;
+  font-weight: 500;
+  box-shadow: 1px 1px 8px  rgb(104, 104, 104);
+  transition: color 300ms ease-in-out;
+}
+
+.btn:hover {
+  opacity: 1;
 }

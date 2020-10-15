@@ -4,6 +4,7 @@
 - ReactJs
 - React Router v6
 - React Slick
+- react Sass
 
 
 ### React Slick
