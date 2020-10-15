@@ -6,7 +6,6 @@
 - React Slick
 
 
-
 ### React Slick
         npm install react-slick
 
@@ -16,3 +15,6 @@ install slick-carousel for css and font
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+## Link
+https://esportsglobal.netlify.app/
