@@ -11,10 +11,6 @@ const registerSchema = new Schema(
     email: { type: String, required: false },
     phone: { type: Number, required: true },
     password: { type: String, required: true },
-    roles:[
-      {type: mongoose.Schema.Types.ObjectId, 
-      ref:"RoleSchema"}
-    ],
     date: {type: Date, default: Date.now}
   },
   {
