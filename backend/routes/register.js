@@ -1,8 +1,9 @@
 const router = require('express').Router()
-let Register = require('../models/register.model')
+let User = require('../models/user.model')
+const crypto = require('crypto')
 
 router.route('/users').get((req,res)=>{
-    Register.find()
+    User.find()
     .then((users)=> res.json(users))
     .catch((err)=>res.status(400).json('Error: '+err.message))
 })
@@ -18,7 +19,7 @@ router.route('/add').post((req,res) => {
     const pubgId = req.body.pubgId
     const phone = req.body.phone
 
-    const newRegister = new Register({
+    const newUser = new User({
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -30,7 +31,7 @@ router.route('/add').post((req,res) => {
     })
 
 
-    newRegister
+    newUser
     .save()
     .then(()=> res.json('User Registered'))
     .catch((err)=> res.status(400).json('Error: ' + err))
