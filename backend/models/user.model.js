@@ -11,7 +11,7 @@ const userSchema = new Schema(
     email: { type: String, required: false },
     phone: { type: Number, required: true },
     password: { type: String, required: true },
-    date: {type: Date, default: Date.now}
+    register_date: {type: Date, default: Date.now}
   },
   {
     timestamps: true,
