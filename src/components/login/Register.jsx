@@ -59,12 +59,12 @@ const Register = () => {
       password, 
     }
 
-    axios.post('http://localhost:5000/register/add',user)
+    axios.post('http://localhost:5000/api/auth/users',user)
     .then(res => console.log(res.data))
-    alert('You have been registered Successfully. ')
+    
 
     console.log(user)
-    window.location ='/'
+    // window.location ='/'
 
   };
 
