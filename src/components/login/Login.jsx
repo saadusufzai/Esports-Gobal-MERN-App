@@ -2,14 +2,30 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { rules } from "../rules/rules"
-
+import { rules } from "../rules/rules";
 import "./login.scss";
 
+export const tokenconfig = (getState) => {
+  const token = getState().auth.token;
+
+  const config = {
+    headers: {
+      "content-type": "application/json",
+    }
+  };
+
+  // if token, add to header
+  if (token) {
+    config.headers['x-auth-token'] = token
+  }
+  return config;
+};
 const Login = () => {
   const [type, setType] = useState(false);
   const [phone, setPhone] = useState();
   const [password, setPassword] = useState();
+
+ 
 
   const onChangePhone = (e) => {
     setPhone(e.target.value);
@@ -25,34 +41,31 @@ const Login = () => {
     let data = JSON.stringify({
       phone,
       password,
-    }) 
+    });
     // Headers
     const config = {
       headers: {
         "Content-Type": "application/json",
       },
     };
-   
 
     axios
-      .post("http://localhost:5000/api/auth/login",data, config)
-      .then((res) => {console.log(res.data.token)
-      localStorage.setItem('token',res.data.token)}
-
-      )
+      .post("http://localhost:5000/api/auth/login", data, config)
+      .then((res) => {
+        console.log(res.data.token);
+        localStorage.setItem("token", res.data.token);
+      })
       .catch((err) => console.log(err));
-  
   };
-
 
   return (
     <div className="register">
       <div className="left">
-      <h2>RULES of the Tournament</h2>
+        <h2>RULES of the Tournament</h2>
         <ul className="rule-list">
-          {rules.map((rule, key)=>
-            (<li key={key}> {rule} </li>)
-          )}
+          {rules.map((rule, key) => (
+            <li key={key}> {rule} </li>
+          ))}
         </ul>
       </div>
       <div className="right">
@@ -63,7 +76,12 @@ const Login = () => {
         </p>
         <form onSubmit={submit}>
           <div className="form">
-            <input onChange={(e)=> onChangePhone(e)} required type="number" placeholder="Phone Number" />
+            <input
+              onChange={(e) => onChangePhone(e)}
+              required
+              type="number"
+              placeholder="Phone Number"
+            />
             <input
               required
               onChange={(e) => onChangePassword(e)}

@@ -49,8 +49,9 @@ const Register = () => {
 
   const submit = (e) => {
     e.preventDefault();
-
-    const user = {
+    
+ // Request body
+    const user = JSON.stringify( {
       firstName, 
       lastName, 
       country, 
@@ -59,9 +60,16 @@ const Register = () => {
       email,
       phone,
       password, 
-    }
+    })
 
-    axios.post('http://localhost:5000/api/auth/users',user)
+    // Headers
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+
+    axios.post('http://localhost:5000/api/auth/users',user,config)
     .then(res => console.log(res.data))
     
 
