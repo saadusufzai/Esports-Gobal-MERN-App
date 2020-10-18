@@ -37,8 +37,7 @@ router.route("/login").post( async (req, res) => {
     res.status(200).json({
       token,
       user: {
-        id: user,
-        _id,
+        id: user._id,
         name: user.name,
         phone: user.phone,
         pubgId: user.pubgId,
