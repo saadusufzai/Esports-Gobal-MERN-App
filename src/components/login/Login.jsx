@@ -22,10 +22,10 @@ const Login = () => {
   const submit = (e) => {
     e.preventDefault();
 
-    const user = {
+    let data = JSON.stringify({
       phone,
       password,
-    };
+    }) 
     // Headers
     const config = {
       headers: {
@@ -35,9 +35,12 @@ const Login = () => {
    
 
     axios
-      .post("http://localhost:5000/api/auth/login", user)
-      .then((res) => console.log(res.data));
+      .post("http://localhost:5000/api/auth/login",data, config)
+      .then((res) => {console.log(res.data.token)
+      localStorage.setItem('token',res.data.token)}
 
+      )
+      .catch((err) => console.log(err));
   
   };
 
@@ -63,7 +66,7 @@ const Login = () => {
             <input onChange={(e)=> onChangePhone(e)} required type="number" placeholder="Phone Number" />
             <input
               required
-              onChange={(e) => onChangePhone(e)}
+              onChange={(e) => onChangePassword(e)}
               onClick={() => setType(true)}
               type={type ? "password" : "text"}
               placeholder="Password *"
