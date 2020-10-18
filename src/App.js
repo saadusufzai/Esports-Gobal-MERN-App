@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -10,8 +10,19 @@ import Header from "./components/home/Header";
 import Login from "./components/login/Login";
 import Footer from "./components/home/Footer";
 import Users from './components/admin/Users'
+
+import { Provider } from 'react-redux';
+import store from './flux/store';
+import { loadUser } from './flux/actions/authActions';
+
+
+
 function App() {
+//   useState(()=>{
+//     store.dispatch(loadUser());
+//   },[])
   return (
+    // <Provider store={store}>
     <Router>
       <Header/>
       <Routes>
@@ -25,6 +36,7 @@ function App() {
       </Routes>
       <Footer/>
     </Router>
+    // </Provider>
   );
 }
 
