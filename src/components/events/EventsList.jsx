@@ -34,6 +34,7 @@ const EventsList = () => {
         </div>
       </div>
       <hr />
+      <br/><br/>
       <div className="inner-events">
         <h2>Solo Vs Solo PUBG MOBILE Tournament No 2</h2>
         <div className="summary">

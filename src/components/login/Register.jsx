@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { rules } from "../rules/rules"
+
 
 import "./style.scss";
 
@@ -70,7 +72,14 @@ const Register = () => {
 
   return (
     <div className="register">
-      <div className="left"></div>
+      <div className="left">
+        <h2>RULES of the Tournament</h2>
+        <ul className="rule-list">
+          {rules.map((rule, key)=>
+            (<li key={key}> {rule} </li>)
+          )}
+        </ul>
+      </div>
       <div className="right">
         <h2>Create Your Account</h2>
         <p>to register for the Tournaments</p>

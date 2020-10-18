@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { rules } from "../rules/rules"
 
 import "./login.scss";
 
@@ -31,31 +32,26 @@ const Login = () => {
         "Content-Type": "application/json",
       },
     };
-    // Request body
-    const body = JSON.stringify({ phone, password });
+   
 
-  //   axios
-  //     .post("http://localhost:5000/api/auth/login",config, user)
-  //     .then((res) => console.log(res.data));
+    axios
+      .post("http://localhost:5000/api/auth/login", user)
+      .then((res) => console.log(res.data));
 
-  const options = {
-    method: 'POST',
-    url: 'http://localhost:5000/api/auth/login',
-    headers: {'content-type': 'application/json'},
-    data: {phone: '03326877676', password: '1234'}
-  };
   
-  axios.request(options).then(function (response) {
-    console.log(response.data);
-  }).catch(function (error) {
-    console.error(error);
-  });
   };
 
 
   return (
     <div className="register">
-      <div className="left"></div>
+      <div className="left">
+      <h2>RULES of the Tournament</h2>
+        <ul className="rule-list">
+          {rules.map((rule, key)=>
+            (<li key={key}> {rule} </li>)
+          )}
+        </ul>
+      </div>
       <div className="right">
         <h2>Sign In</h2>
         <p>

@@ -27,6 +27,9 @@ const Footer = () => {
             <li>
               <a href="/Login">Login/Register</a>
             </li>
+            <li>
+              <a href="/admin/users">Users</a>
+            </li>
           </ul>
         </div>
         

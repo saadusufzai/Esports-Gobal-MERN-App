@@ -4,14 +4,21 @@
   }
 
 .events{
+    
+    width: 70%;
+    color:  rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.events-main{
+    background-color:#000;
    
-    color: rgb(0, 0, 0);
 }
 
 .inner-events{
    
    
-    margin: 10px auto;
+    margin: 0px auto;
     padding: 5px;
     padding-bottom: 20px;
 }
@@ -22,7 +29,7 @@
     margin-bottom: 10px;
     border-bottom: 5px solid rgb(255, 116, 2); ;
     text-transform: uppercase;
-    width: 50%;
+    width: 70%;
 }
 
 .summary{

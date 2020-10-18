@@ -1,0 +1,23 @@
+
+table {
+    margin: 2em auto; 
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray
+  }
+
+  tr{
+      text-transform: uppercase;
+  }
+  td, th {
+    
+    padding: 10px 15px;
+    text-align: center;
+  
+  }
+  th {
+    background: lightblue;
+    border-color: white;
+  }
+  
