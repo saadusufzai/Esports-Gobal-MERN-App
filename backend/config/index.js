@@ -1,8 +1,8 @@
-import dotenv from 'dotenv';
+const dotenv = require('dotenv') 
 
 dotenv.config();
 
-export default {
+module.exports = {
   MONGO_URI: process.env.MONGO_URI,
   JWT_SECRET: process.env.JWT_SECRET
 };

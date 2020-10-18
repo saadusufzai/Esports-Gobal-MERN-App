@@ -1,13 +1,13 @@
-import { Router } from "express";
-import bcrypt from "bcryptjs";
-import config from "../../config";
-import jwt from "jsonwebtoken";
-import auth from "../../middleware/auth";
+const  router  = require("express").Router()
+const bcrypt = require("bcryptjs")
+const config = require("../config")
+const jwt = require("jsonwebtoken")
+const auth = require("../middleware/auth")
 // User Model
-import User from "../../models/User";
+const User = require("../models/user.model")
 
 const { JWT_SECRET } = config;
-const router = Router();
+// const router = Router();//
 
 /**
  * @route   POST api/auth/login
@@ -15,7 +15,7 @@ const router = Router();
  * @access  Public
  */
 
-router.post("/login", async (req, res) => {
+router.route("/login").post( async (req, res) => {
   const { phone, password } = req.body;
 
   // Validation
@@ -53,13 +53,13 @@ router.post("/login", async (req, res) => {
 });
 
 /**
- * @route   POST api/users
+ * @route   POST api/auth/users
  * @desc    Register new user
  * @access  Public
  */
 
-router.post("/register", async (req, res) => {
-  const { firstName, lastName, phone, password } = req.body;
+router.post("/users", async (req, res) => {
+  const { firstName, lastName, phone, password,email } = req.body;
 
   // Validation
 
@@ -68,8 +68,11 @@ router.post("/register", async (req, res) => {
   }
 
   try {
-    const user = await User.findOne({ phone });
-    if (user) throw Error("User already exists");
+    const phoneN = await User.findOne({ phone});
+    if (phoneN) throw Error("PhoneNumber already exists");
+
+    const emailN = await User.findOne({ email });
+    if (emailN) throw Error("Email already exists");
 
     const salt = await bcrypt.genSalt(10);
     if (!salt) throw Error("Something went wrong with bcrypt");
@@ -126,4 +129,4 @@ router.get("/user", auth, async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router

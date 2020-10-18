@@ -27,8 +27,9 @@ const Header = () => {
           <li>
             <a href="/tournaments">TOURNAMENTS</a>
           </li>
-          <li className="btn">
+          <li style={{background:"red",}} className="btn">
             <a
+              
               onMouseEnter={() => setColor(true)}
               onMouseLeave={() => setColor(false)}
               style={{ color: `${color ? "#000" : "#fff"}` }}

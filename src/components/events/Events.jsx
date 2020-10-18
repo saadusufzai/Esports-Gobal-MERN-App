@@ -4,7 +4,9 @@ import "./style.css";
 
 const Events = () => {
   return (
-    <EventsList/>
+    <div className="events-main">
+      <EventsList/>
+    </div>
   );
 };
 
