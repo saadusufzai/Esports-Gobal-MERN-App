@@ -1,7 +1,7 @@
 {
   "name": "esports-global",
   "version": "0.1.0",
-  "proxy":"http://localhost:5000",
+  "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -12,9 +12,13 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "3.4.3",
     "react-slick": "^0.27.11",
+    "reactstrap": "^8.6.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {

@@ -3,12 +3,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { rules } from "../rules/rules"
+import { Alert } from 'reactstrap';
 
 
 import "./style.scss";
 
 const Register = () => {
   const [type, setType] = useState(false);
+  const [data, setData] = useState();
   const navigate = useNavigate();
 
   const [firstName, setFirstName] = useState("");
@@ -49,8 +51,9 @@ const Register = () => {
 
   const submit = (e) => {
     e.preventDefault();
-
-    const user = {
+    
+ // Request body
+    const user = JSON.stringify( {
       firstName, 
       lastName, 
       country, 
@@ -59,16 +62,46 @@ const Register = () => {
       email,
       phone,
       password, 
-    }
+    })
 
-    axios.post('http://localhost:5000/api/auth/users',user)
-    .then(res => console.log(res.data))
+    // Headers
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+
+    axios.post('http://localhost:5000/api/auth/users',user,config)
+    .then(res => {setData(res.data)
+    console.log(res.data)}
+   )
     
 
     console.log(user)
-    // window.location ='/'
+    alert(`Congrats You have been Registered Successfully. Our Team will contact you soon on the number you provided. `)
+  
+    window.location ='/'
 
   };
+
+  const popup = ()=>{
+    return(
+      <div className="popup">
+      <Alert color="success">
+        <h4 className="alert-heading">Well done!</h4>
+        <p>
+          Aww yeah, you successfully read this important alert message. This example text is going
+          to run a bit longer so that you can see how spacing within an alert works with this kind
+          of content.
+        </p>
+        <hr />
+        <p className="mb-0">
+          Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+        </p>
+      </Alert>
+    </div>
+    )
+  }
 
   return (
     <div className="register">
