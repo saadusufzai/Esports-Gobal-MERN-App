@@ -9,23 +9,23 @@ const Social = () => {
           
           <ul>
             <li>
-              <a href="#">
-                <i style={{}}  class=" fb fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+              <a target='blank' href="https://www.facebook.com/">
+                <i style={{}}  className=" fb fa fa-facebook-official fa-2x" aria-hidden="true"></i>
               </a>
             </li>
             <li>
-              <a href="">
-                <i class="insta fa fa-instagram fa-2x" aria-hidden="true"></i>
+              <a target='blank' href="https://www.facebook.com/">
+                <i className="insta fa fa-instagram fa-2x" aria-hidden="true"></i>
               </a>
             </li>
             <li>
-              <a href="">
-                <i class=" yt fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+              <a target='blank' href="https://www.facebook.com/">
+                <i className=" yt fa fa-youtube-play fa-2x" aria-hidden="true"></i>
               </a>
             </li>
             <li>
-              <a href="">
-                <i class="wa fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+              <a target='blank' href="https://www.facebook.com/">
+                <i className="wa fa fa-whatsapp fa-2x" aria-hidden="true"></i>
                 
               </a>
             </li>

@@ -1,8 +1,11 @@
 import React from "react";
 import "./style.css";
+import {useNavigate} from 'react-router-dom'
 
 import img from "../../images/pubg.jpg";
 const EventsList = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="events">
       <h1>Events</h1>
@@ -29,7 +32,7 @@ const EventsList = () => {
             Tournament.
           </p>
         </div>
-        <div href="./register" className="btn">
+        <div onClick={() => navigate('/register')} className="btn">
           REGISTER NOW
         </div>
       </div>
@@ -58,7 +61,7 @@ const EventsList = () => {
             Tournament.
           </p>
         </div>
-        <div href="./register" className="btn">
+        <div onClick={() => navigate('/register')} className="btn">
           REGISTER NOW
         </div>
       </div>

@@ -37,13 +37,13 @@ const Footer = () => {
           <ul>
             <h4>Contact Us</h4>
             <li>
-              <i class="fa fa-phone" aria-hidden="true"></i>0332877676
+              <i className="fa fa-phone" aria-hidden="true"></i>0332877676
             </li>
             <li>
-              <i class="fa fa-envelope" aria-hidden="true"></i>email@gmial.com
+              <i className="fa fa-envelope" aria-hidden="true"></i>email@gmial.com
             </li>
             <li>
-              <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              <i className="fa fa-external-link-square" aria-hidden="true"></i>
               www.esportsgloal.netlify.app
             </li>
           </ul>

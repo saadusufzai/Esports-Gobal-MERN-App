@@ -23,6 +23,11 @@ const Header = () => {
 
   return (
     <div className="header">
+      <i
+          onClick={() => handelMenuOpen()}
+          className="menu-btn fa fa-bars fa-2x"
+          aria-hidden="true"
+        ></i>
       <div className="logo">
         <img
           style={{ cursor: "pointer" }}
@@ -30,11 +35,7 @@ const Header = () => {
           src={logo}
           alt="logo-esports-global"
         />
-        <i
-          onClick={() => handelMenuOpen()}
-          className="menu-btn fa fa-bars fa-2x"
-          aria-hidden="true"
-        ></i>
+        
       </div>
       <div className={menus}>
         <ul onClick={() => handelMenuClose()}>
