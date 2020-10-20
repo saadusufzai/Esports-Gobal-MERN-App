@@ -5,7 +5,7 @@
 - React Router v6
 - React Slick
 - react Sass
-
+- classname (to conditionally join classnames)
 
 ### React Slick
         npm install react-slick

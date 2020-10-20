@@ -10,12 +10,12 @@ const EventsList = () => {
         <h2>Solo Vs Solo PUBG MOBILE Tournament No 1</h2>
         <div className="summary">
           <span>
-            <i class="fa fa-clock-o" aria-hidden="true"></i> will be announced
+            <i className="fa fa-clock-o" aria-hidden="true"></i> will be announced
             soon.
           </span>
           <span>
-            <i class="fa fa-male" aria-hidden="true"></i>VS
-            <i class="fa fa-male" aria-hidden="true"></i>
+            <i className="fa fa-male" aria-hidden="true"></i>VS
+            <i className="fa fa-male" aria-hidden="true"></i>
           </span>
         </div>
         <div className="text">
@@ -39,12 +39,12 @@ const EventsList = () => {
         <h2>Solo Vs Solo PUBG MOBILE Tournament No 2</h2>
         <div className="summary">
           <span>
-            <i class="fa fa-clock-o" aria-hidden="true"></i> will be announced
+            <i className="fa fa-clock-o" aria-hidden="true"></i> will be announced
             soon.
           </span>
           <span>
-            <i class="fa fa-male" aria-hidden="true"></i>VS
-            <i class="fa fa-male" aria-hidden="true"></i>
+            <i className="fa fa-male" aria-hidden="true"></i>VS
+            <i className="fa fa-male" aria-hidden="true"></i>
           </span>
         </div>
         <div className="text">
