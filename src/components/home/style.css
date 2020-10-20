@@ -25,10 +25,14 @@
 }
 
 .header {
+  width: 100%;
   background-color: var(--secondary);
   display: flex;
+  height: 120px;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  z-index: 1;
 }
 
 .header .logo img {
@@ -59,6 +63,10 @@
 
 .header .menu ul a:hover {
   color: #fff;
+}
+
+.header .title{
+  display: none
 }
 
 /* LiveStream */
@@ -135,6 +143,7 @@ footer {
   background-color: black;
   text-align: center;
   font-size: 14px;
+  line-height:1.5em
 }
 .copyright a {
   margin-left: 5px;
@@ -204,7 +213,7 @@ footer {
 
 @media (max-width: 768px) {
   /* Header Queries */
- .header .close-btn {
+  .header .close-btn {
     display: block;
     position: absolute;
     right: 10px;
@@ -258,18 +267,44 @@ footer {
   }
 
   .header .menu ul {
+    width: 100%;
     display: block;
     margin-top: 20px;
   }
   .header .menu ul li {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
     margin-left: 5px;
-    font-size: 26px;
+    border-bottom: 1px solid rgb(128, 128, 128);
+  }
+  .header .menu ul li a {
+    font-size: 16px;
+  }
+
+  .header .menu ul li:nth-child(2){
+    margin-top: 2em;
+
   }
 
   .header .menu ul li:last-child {
-    display: none;
+    position: absolute;
+    width: 80%;
+    margin: 20px 25px;
   }
+
+  .header .menu ul a:hover {
+    color: var(--secondary);
+  }
+
+  .header .title {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 5em;
+    text-align: center;
+  }
+
   /* Header Complete */
 
   /* Carousel */

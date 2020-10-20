@@ -37,6 +37,7 @@ const Header = () => {
         />
         
       </div>
+      {/* <h2 className="title"  >ESPORTS GLOBAL</h2> */}
       <div className={menus}>
         <ul onClick={() => handelMenuClose()}>
           <i

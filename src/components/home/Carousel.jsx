@@ -2,7 +2,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import './style.css'
+import "./style.css";
 
 import img1 from "../../images/poster1.jpg";
 import img2 from "../../images/poster2.jpg";
@@ -21,7 +21,7 @@ const Carousel = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     draggable: true,
-    className:'slider'
+    className: "slider",
   };
   return (
     <Slider {...settings}>

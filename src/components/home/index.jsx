@@ -8,7 +8,7 @@ import Social from "./Social";
 
 const Home = () => {
   return (
-    <div>
+    <div >
       <Carousel />
       <Events />
       <LiveStream />
