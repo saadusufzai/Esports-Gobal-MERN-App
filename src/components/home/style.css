@@ -24,6 +24,12 @@
   display: none;
 }
 
+ .scroll{
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px black;
+  transition: all .5s ease-in-out;
+}
+
 .header {
   width: 100%;
   background-color: var(--secondary);
@@ -256,7 +262,7 @@ footer {
     top: 0;
     z-index: 1;
     height: 100%;
-    opacity: 0.7;
+    opacity: 0.9;
     position: fixed;
     width: 50%;
     transform: translateX(-110%);
@@ -290,7 +296,7 @@ footer {
   .header .menu ul li:last-child {
     position: absolute;
     width: 80%;
-    margin: 20px 25px;
+   
   }
 
   .header .menu ul a:hover {

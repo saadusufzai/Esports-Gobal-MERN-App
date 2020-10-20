@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import logo from "../../images/logo1.png";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
@@ -8,11 +8,34 @@ const Header = () => {
   const navigate = useNavigate();
   const [color, setColor] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled , setScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handelScroll)
+  })
+
+  const handelScroll = ()=>{
+    const offset=window.scrollY;
+    if(offset > 300 ){
+      setScrolled(true);
+    }
+    else{
+      setScrolled(false);
+    }
+    
+  }
+  console.log(scrolled);
 
   var menus = cx({
     menu: true,
+
     mobileMenu: menuOpen,
   });
+
+  let header = cx({
+    header: true,
+    scroll:scrolled
+  })
 
   const handelMenuOpen = () => {
     setMenuOpen(!menuOpen);
@@ -22,7 +45,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
+    <div className={header}>
       <i
           onClick={() => handelMenuOpen()}
           className="menu-btn fa fa-bars fa-2x"
@@ -38,7 +61,7 @@ const Header = () => {
         
       </div>
       {/* <h2 className="title"  >ESPORTS GLOBAL</h2> */}
-      <div className={menus}>
+      <div  className={menus}>
         <ul onClick={() => handelMenuClose()}>
           <i
             onClick={() => handelMenuClose()}
