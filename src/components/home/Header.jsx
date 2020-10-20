@@ -2,15 +2,20 @@ import React, { useState } from "react";
 import logo from "../../images/logo1.png";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import cx from "classname";
 
 const Header = () => {
   const navigate = useNavigate();
   const [color, setColor] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
- 
+
+  var menus = cx({
+    menu: true,
+    mobileMenu: menuOpen,
+  });
 
   const handelMenuOpen = () => {
-    setMenuOpen(true);
+    setMenuOpen(!menuOpen);
   };
   const handelMenuClose = () => {
     setMenuOpen(false);
@@ -27,20 +32,15 @@ const Header = () => {
         />
         <i
           onClick={() => handelMenuOpen()}
-          class="menu-btn fa fa-bars"
+          className="menu-btn fa fa-bars fa-2x"
           aria-hidden="true"
         ></i>
       </div>
-      <div
-        style={{
-          transform: `${ menuOpen ? "translateX(0)" : "translateX(-110)"}`,
-        }}
-        className="menu"
-      >
-        <ul>
+      <div className={menus}>
+        <ul onClick={() => handelMenuClose()}>
           <i
             onClick={() => handelMenuClose()}
-            class="close-btn fa fa-times"
+            className="close-btn fa fa-times"
             aria-hidden="true"
           ></i>
 
