@@ -40,3 +40,13 @@ table {
     padding: 15px 20px;
     margin: 10px 0;
   }
+
+  @media (max-width: 768px) {
+
+    .admin-login h1{
+      margin-bottom: 10px;
+    }
+    table{
+      width: 90%;
+    }
+  }
