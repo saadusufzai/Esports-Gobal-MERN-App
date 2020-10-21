@@ -8,7 +8,7 @@ const Users = () => {
   const [username, setUsername] = useState();
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users/")
+      .get("https://esports-global.herokuapp.com/api/users/")
       .then((res) => {
         console.log(res.data);
         setUsers(res.data);
