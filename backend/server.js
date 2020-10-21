@@ -10,16 +10,16 @@ const port = process.env.PORT || 5000;
 
 
 
-app.disable('x-powered-by')
+app.disable('X-Powered-By')
 app.use(cors());
 app.use(morgan('dev'))
 app.use(express.json());
 
 //CORS Middleware
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   next();
+// });
 
 
 // routes

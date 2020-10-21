@@ -1,48 +1,8 @@
-// const router = require('express').Router()
-// let User = require('../models/user.model')
-// const crypto = require('crypto')
-
-// router.route('/users').get((req,res)=>{
-//     User.find()
-//     .then((users)=> res.json(users))
-//     .catch((err)=>res.status(400).json('Error: '+err.message))
-// })
-
-
-// router.route('/add').post((req,res) => {
-//     const firstName = req.body.firstName
-//     const lastName = req.body.lastName
-//     const email = req.body.email
-//     const password = req.body.password
-//     const country = req.body.country
-//     const city = req.body.city
-//     const pubgId = req.body.pubgId
-//     const phone = req.body.phone
-
-//     const newUser = new User({
-//         firstName: firstName,
-//         lastName: lastName,
-//         email: email,
-//         password: password,
-//         country: country,
-//         city: city,
-//         pubgId: pubgId,
-//         phone: phone
-//     })
-
-
-//     newUser
-//     .save()
-//     .then(()=> res.json('User Registered'))
-//     .catch((err)=> res.status(400).json('Error: ' + err))
-// })
-
-// module.exports = router
-
 const Router = require('express')
 const User = require('../models/user.model')
+const bcrypt = require("bcryptjs")
 
-const router = Router()
+const router =Router.Router()
 
 
 /**
@@ -61,5 +21,70 @@ router.get('/', async (req, res) => {
       res.status(400).json({ msg: e.message });
     }
   });
+
+
+  /**
+ * @route   GET api/users/id
+ * @desc    Get specific user 
+ * @access  Private
+ */
+
+  router.route("/:id").get((req, res) => {
+    User.findById(req.params.id)
+      .then((user) => res.json(user))
+      .catch((err) => res.status(400).json("Error: " + err));
+  });
+  
+
+  /**
+ * @route   Delete api/users/id
+ * @desc    User Deleted
+ * @access  Private
+ */
+
+
+  router.route("/:id").delete((req, res) => {
+    User.findByIdAndDelete(req.params.id)
+      .then(() => res.json("User Deleted !"))
+      .catch((err) => res.status(400).json("Error: " + err));
+  });
+  
+
+  /**
+ * @route   GET api/users/update/:id
+ * @desc    Get all users
+ * @access  Private
+ */
+
+
+  router.route("/update/:id").post((req, res) => {
+    User.findById(req.params.id)
+      .then((user) => {
+        const password = req.password;
+        const salt = await bcrypt.genSalt(10);
+        if (!salt) throw Error("Something went wrong with bcrypt");
+
+        const hash = await bcrypt.hash(password, salt);
+        if (!hash) throw Error("Something went wrong hashing password");
+
+        user.firstName = req.body.firstName;
+        user.lastName = req.body.lastName;
+        user.country = req.body.country;
+        user.city = req.body.city;
+        user.pubgId = req.body.pubgId;
+        user.phone = req.body.phone;
+        user.password = hash
+        user.date = Date.parse(req.body.date);
+  
+        user
+          .save()
+          .then(() => res.json("User updated !"))
+          .catch((err) => res.status(400).json("Error: " + err));
+      })
+      .catch((err) => res.status(400).json("Error: " + err));
+  });
+
+
+
 
   module.exports = router

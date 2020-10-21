@@ -75,14 +75,18 @@ const Register = () => {
 
     axios.post('https://esports-global.herokuapp.com/api/auth/users',user ,config)
     .then(res => {setData(res.data)
-    console.log(res.data)}
-   )
+    console.log(res.data)
+    alert(`Congrats You have been Registered Successfully. Our Team will contact you soon on the number you provided. `)
+    setTimeout(() => {
+      window.location ='/'
+    }, 2000);    
+  }
+   ).catch(err => console.log(err))
     
 
-    console.log(user)
-    alert(`Congrats You have been Registered Successfully. Our Team will contact you soon on the number you provided. `)
-  
-    // window.location ='/'
+    
+   
+    
 
   };
 

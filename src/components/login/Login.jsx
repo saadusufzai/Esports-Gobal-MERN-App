@@ -50,7 +50,7 @@ const Login = () => {
     };
 
     axios
-      .post("http://localhost:5000/api/auth/login", data, config)
+      .post("https://esports-global.herokuapp.com/api/auth/login", data, config)
       .then((res) => {
         console.log(res.data.token);
         localStorage.setItem("token", res.data.token);
