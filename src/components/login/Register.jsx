@@ -67,11 +67,13 @@ const Register = () => {
     // Headers
   const config = {
     headers: {
-      'Content-Type': 'application/json'
+      
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
     }
   };
 
-    axios.post('http://localhost:5000/api/auth/users',user,config)
+    axios.post('https://esports-global.herokuapp.com/api/auth/users',user ,config)
     .then(res => {setData(res.data)
     console.log(res.data)}
    )
@@ -80,7 +82,7 @@ const Register = () => {
     console.log(user)
     alert(`Congrats You have been Registered Successfully. Our Team will contact you soon on the number you provided. `)
   
-    window.location ='/'
+    // window.location ='/'
 
   };
 
