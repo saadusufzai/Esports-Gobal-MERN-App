@@ -11,11 +11,14 @@ import Login from "./components/login/Login";
 import Footer from "./components/home/Footer";
 import Users from "./components/admin/Users";
 
-import { Provider } from "react-redux";
-import store from "./flux/store";
-import { loadUser } from "./flux/actions/authActions";
+// import { Provider } from "react-redux";
+// import store from "./flux/store";
+// import { loadUser } from "./flux/actions/authActions";
+
 
 function App() {
+  const [user,setUser] = useState()
+
   //   useState(()=>{
   //     store.dispatch(loadUser());
   //   },[])
@@ -30,7 +33,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/tournaments" element={<Tournament />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login user={user} setUser={setUser} />} />
           <Route path="/admin/users" element={<Users />} />
         </Routes>
       </div>

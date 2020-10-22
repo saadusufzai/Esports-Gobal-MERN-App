@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import {useAlert} from "react-alert"
+
 import { rules } from "../rules/rules";
 import "./login.scss";
 
@@ -20,10 +22,12 @@ export const tokenconfig = (getState) => {
   }
   return config;
 };
-const Login = () => {
+const Login = ({user,setUser}) => {
   const [type, setType] = useState(false);
   const [phone, setPhone] = useState();
   const [password, setPassword] = useState();
+
+  const alert = useAlert();
 
  
 
@@ -52,7 +56,9 @@ const Login = () => {
     axios
       .post("https://esports-global.herokuapp.com/api/auth/login", data, config)
       .then((res) => {
-        console.log(res.data.token);
+        alert.success('You Have Been Logged In')
+        setUser(res.data.user) 
+        console.log(res.data);
         localStorage.setItem("token", res.data.token);
       })
       .catch((err) => console.log(err));
