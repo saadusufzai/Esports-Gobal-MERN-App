@@ -57,33 +57,33 @@ router.get('/', async (req, res) => {
  */
 
 
-  // router.route ("/update/:id").post((req, res)  => {
-  //   User.findById(req.params.id)
-  //     .then((user) => {
+  router.route ("/update/:id").post((req, res)  => {
+    User.findById(req.params.id)
+      .then((user) => {
         
-  //       const password = req.password;
-  //       const salt =  bcrypt.genSalt(10);
-  //       if (!salt) throw Error("Something went wrong with bcrypt");
+        const password = req.password;
+        const salt =  bcrypt.genSalt(10);
+        if (!salt) throw Error("Something went wrong with bcrypt");
 
-  //       const hash =  bcrypt.hash(password, salt);
-  //       if (!hash) throw Error("Something went wrong hashing password");
+        const hash =  bcrypt.hash(password, salt);
+        if (!hash) throw Error("Something went wrong hashing password");
 
-  //       user.firstName = req.body.firstName;
-  //       user.lastName = req.body.lastName;
-  //       user.country = req.body.country;
-  //       user.city = req.body.city;
-  //       user.pubgId = req.body.pubgId;
-  //       user.phone = req.body.phone;
-  //       user.password = hash
-  //       user.date = Date.parse(req.body.date);
+        user.firstName = req.body.firstName;
+        user.lastName = req.body.lastName;
+        user.country = req.body.country;
+        user.city = req.body.city;
+        user.pubgId = req.body.pubgId;
+        user.phone = req.body.phone;
+        user.password = hash
+        user.date = Date.parse(req.body.date);
   
-  //       user
-  //         .save()
-  //         .then(() => res.json("User updated !"))
-  //         .catch((err) => res.status(400).json("Error: " + err));
-  //     })
-  //     .catch((err) => res.status(400).json("Error: " + err));
-  // });
+        user
+          .save()
+          .then(() => res.json("User updated !"))
+          .catch((err) => res.status(400).json("Error: " + err));
+      })
+      .catch((err) => res.status(400).json("Error: " + err));
+  });
 
 
 
