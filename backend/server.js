@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 
 
 
-app.disable('X-Powered-By')
+app.disable('x-powered-by')
 app.use(cors());
 app.use(morgan('dev'))
 app.use(express.json());

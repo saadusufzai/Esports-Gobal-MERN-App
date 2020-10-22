@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "esports-global-backend",
   "engines": {
     "node": "12.16.3",
