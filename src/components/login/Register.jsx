@@ -2,16 +2,15 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { rules } from "../rules/rules"
-import { Alert } from 'reactstrap';
-
-
+import { rules } from "../rules/rules";
+import { useAlert } from 'react-alert'
 import "./style.scss";
 
 const Register = () => {
   const [type, setType] = useState(false);
   const [data, setData] = useState();
   const navigate = useNavigate();
+  const alert = useAlert();
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -51,72 +50,48 @@ const Register = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    
- // Request body
-    const user = JSON.stringify( {
-      firstName, 
-      lastName, 
-      country, 
-      city, 
-      pubgId, 
+
+    // Request body
+    const user = JSON.stringify({
+      firstName,
+      lastName,
+      country,
+      city,
+      pubgId,
       email,
       phone,
-      password, 
-    })
+      password,
+    });
 
     // Headers
-  const config = {
-    headers: {
-      
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    }
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    };
+
+    axios
+      .post("https://esports-global.herokuapp.com/api/auth/users", user, config)
+      .then((res) => {
+        setData(res.data);
+        console.log(res.data);
+        alert.success('Thank you! You have been Registered!')
+        setTimeout(() => {
+          window.location = "/";
+        }, 2000);
+      })
+      .catch((err) => console.log(err));
   };
-
-    axios.post('https://esports-global.herokuapp.com/api/auth/users',user ,config)
-    .then(res => {setData(res.data)
-    console.log(res.data)
-    alert(`Congrats You have been Registered Successfully. Our Team will contact you soon on the number you provided. `)
-    setTimeout(() => {
-      window.location ='/'
-    }, 2000);    
-  }
-   ).catch(err => console.log(err))
-    
-
-    
-   
-    
-
-  };
-
-  const popup = ()=>{
-    return(
-      <div className="popup">
-      <Alert color="success">
-        <h4 className="alert-heading">Well done!</h4>
-        <p>
-          Aww yeah, you successfully read this important alert message. This example text is going
-          to run a bit longer so that you can see how spacing within an alert works with this kind
-          of content.
-        </p>
-        <hr />
-        <p className="mb-0">
-          Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
-        </p>
-      </Alert>
-    </div>
-    )
-  }
 
   return (
     <div className="register">
       <div className="left">
         <h2>RULES of the Tournament</h2>
         <ul className="rule-list">
-          {rules.map((rule, key)=>
-            (<li key={key}> {rule} </li>)
-          )}
+          {rules.map((rule, key) => (
+            <li key={key}> {rule} </li>
+          ))}
         </ul>
       </div>
       <div className="right">
@@ -141,7 +116,7 @@ const Register = () => {
               <option value="Pakistan">Pakistan</option>
               <option value="India">India</option>
             </select>
-            <select value={city}  onChange={(e) => onChangeCity(e)}>
+            <select value={city} onChange={(e) => onChangeCity(e)}>
               <option value="">City</option>
               <option value="Bhakkar">Bhakkar</option>
             </select>

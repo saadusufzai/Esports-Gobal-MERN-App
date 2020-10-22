@@ -42,11 +42,15 @@ table {
   }
 
   @media (max-width: 768px) {
-
+    .usersEdit{
+      width:100vw
+    }
     .admin-login h1{
       margin-bottom: 10px;
     }
     table{
-      width: 90%;
+      width: 90vw;
     }
+
+    
   }

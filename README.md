@@ -6,6 +6,7 @@
 - React Slick
 - react Sass
 - classname (to conditionally join classnames)
+- react alert
 
 ### React Slick
         npm install react-slick
