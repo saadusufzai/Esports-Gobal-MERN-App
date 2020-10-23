@@ -164,7 +164,7 @@ const Register = () => {
             <input
               readOnly
               onClick={() => toLogin()}
-              value="Already Have An Account ! SignIn"
+              value="Back"
               className="btn noselect back"
             />
           </div>

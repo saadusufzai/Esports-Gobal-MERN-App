@@ -78,6 +78,9 @@ const Header = () => {
           <li>
             <Link onClick={() =>  window.scrollTo(0, 0)} to="/tournaments">TOURNAMENTS</Link>
           </li>
+          <li>
+            <Link onClick={() =>  window.scrollTo(0, 0)} to="/login">Sign In</Link>
+          </li>
           <li style={{ background: "red" }} className="btn">
             <Link
               onClick={() =>  window.scrollTo(0, 0)}
@@ -86,7 +89,7 @@ const Header = () => {
               style={{ color: `${color ? "#000" : "#fff"}` }}
               to="/register"
             >
-              Login/Register
+              Register Now
             </Link>
           </li>
         </ul>

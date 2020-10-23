@@ -64,6 +64,7 @@
   color: var(--primary);
   font-size: 16px;
   font-weight: 500;
+  white-space: nowrap;
   transition: color ease-in-out 300ms;
 }
 
@@ -107,7 +108,7 @@ footer {
 }
 
 .inner-footer {
-  width: 80%;
+  width: 95%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;

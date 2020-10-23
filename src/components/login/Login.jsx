@@ -7,8 +7,8 @@ import { useAlert } from "react-alert";
 import { rules } from "../rules/rules";
 import "./login.scss";
 
-export const tokenconfig = (getState) => {
-  const token = getState().auth.token;
+export const tokenconfig = (token) => {
+  // const token = getState().auth.token;
 
   const config = {
     headers: {
@@ -28,6 +28,8 @@ const Login = ({ user, setUser, setIsAuthenticated }) => {
   const [password, setPassword] = useState();
   const navigate = useNavigate();
   const alert = useAlert();
+  tokenconfig(localStorage.getItem('token'))
+  console.log(tokenconfig(localStorage.getItem('token')))
 
   const onChangePhone = (e) => {
     setPhone(e.target.value);
@@ -45,11 +47,7 @@ const Login = ({ user, setUser, setIsAuthenticated }) => {
       password,
     });
     // Headers
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
+    const config = tokenconfig(localStorage.getItem('token'))
 
     axios
       .post("https://esports-global.herokuapp.com/api/auth/login", data, config)

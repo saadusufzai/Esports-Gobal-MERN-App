@@ -8,16 +8,7 @@ import ReactTooltip from 'react-tooltip';
 
 const Profile = ({user, isAuthenticated }) => {
   const [status, setStatus] = useState("Pending");
-  const [firstName,setFirstName] = useState('')
-  const [lastName,setLastName] = useState('')
   
-  useEffect(() => {
-      axios.get(`https://esports-global.herokuapp.com/api/users/${user.id}`)
-        .then((res) => {
-            setFirstName(res.data.firstName)
-            setLastName(res.data.lastName)
-        }) 
-  },user)
 
 
 
@@ -28,7 +19,7 @@ const Profile = ({user, isAuthenticated }) => {
           <div className={classes.avatar}>
             <img src={avatar1} alt="avatar" />
             <h2 className="name">
-              {user.name} 
+              {user.firstName} {user.lastName} 
             </h2>
             <p>
               {" "}
@@ -54,11 +45,11 @@ const Profile = ({user, isAuthenticated }) => {
             <ul>
               <li>
                 <h3>First Name:</h3>
-                <p>{firstName}</p>
+                <p>{user.firstName}</p>
               </li>
               <li>
                 <h3>Last Name:</h3>
-                <p>{lastName}</p>
+                <p>{user.lastName}</p>
               </li>
               <li>
                 <h3>City:</h3>
