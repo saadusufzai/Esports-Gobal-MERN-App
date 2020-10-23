@@ -3,7 +3,6 @@
   margin: 20px auto;
   display: grid;
   grid: 8;
-
   grid-gap: 20px;
 }
 
@@ -120,6 +119,12 @@
   .profileContainer {
   }
 
+  .profileContainer .right .feeStatus {
+    top: 3.5em;
+    right: 2em;
+  }
+
+
   .profileContainer .left .avatar img {
     width: 130px;
     margin-bottom: 10px;
@@ -130,6 +135,14 @@
   }
   .profileContainer .right {
     grid-column: 1 / 2;
+    padding: 10px; 
+  }
+  .profileContainer .right .info {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .profileContainer .right ul li h3 {
@@ -140,4 +153,9 @@
     font-size: 12px;
     font-weight: 400;
   }
+}
+
+
+@media(max-width:430px){
+
 }

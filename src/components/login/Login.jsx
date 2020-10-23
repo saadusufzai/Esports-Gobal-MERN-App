@@ -28,8 +28,8 @@ const Login = ({ user, setUser, setIsAuthenticated }) => {
   const [password, setPassword] = useState();
   const navigate = useNavigate();
   const alert = useAlert();
-  tokenconfig(localStorage.getItem('token'))
-  console.log(tokenconfig(localStorage.getItem('token')))
+  
+ 
 
   const onChangePhone = (e) => {
     setPhone(e.target.value);
@@ -46,6 +46,7 @@ const Login = ({ user, setUser, setIsAuthenticated }) => {
       phone,
       password,
     });
+    
     // Headers
     const config = tokenconfig(localStorage.getItem('token'))
 

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { rules } from "../rules/rules";
 import { useAlert } from "react-alert";
+
 import "./style.scss";
 
 const Register = () => {
@@ -101,7 +102,7 @@ const Register = () => {
       </div>
       <div className="right">
         <h2>Create Your Account</h2>
-        <p>to register for the Tournaments</p>
+        <p>To Register For The Tournaments</p>
         <form onSubmit={submit}>
           <div className="form">
             <input
