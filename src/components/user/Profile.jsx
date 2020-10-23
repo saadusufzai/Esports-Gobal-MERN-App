@@ -41,7 +41,7 @@ const Profile = ({user, isAuthenticated }) => {
           <div  data-tip="Submit Fee in order to participate in the Upcoming PUBG Tournament" className={classes.feeStatus}>
             Fee Status <p>{status}</p>
           </div>
-          <div className={classes.edit}>
+          <div data-tip="Will be Updated Soon" className={classes.edit}>
             Edit <i class="fa fa-pencil" aria-hidden="true"></i>
           </div>
 
