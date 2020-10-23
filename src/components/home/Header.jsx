@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import logo from "../../images/logo1.png";
 import "./style.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import cx from "classname";
 
 const Header = () => {
@@ -70,23 +70,24 @@ const Header = () => {
           ></i>
 
           <li>
-            <a href="/">HOME</a>
+            <Link onClick={() =>  window.scrollTo(0, 0)}  to="/">HOME</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link onClick={() =>  window.scrollTo(0, 0)} to="/about">About</Link>
           </li>
           <li>
-            <a href="/tournaments">TOURNAMENTS</a>
+            <Link onClick={() =>  window.scrollTo(0, 0)} to="/tournaments">TOURNAMENTS</Link>
           </li>
           <li style={{ background: "red" }} className="btn">
-            <a
+            <Link
+              onClick={() =>  window.scrollTo(0, 0)}
               onMouseEnter={() => setColor(true)}
               onMouseLeave={() => setColor(false)}
               style={{ color: `${color ? "#000" : "#fff"}` }}
-              href="/register"
+              to="/register"
             >
               Login/Register
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

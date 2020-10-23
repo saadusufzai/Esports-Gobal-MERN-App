@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { rules } from "../rules/rules";
-import { useAlert } from 'react-alert'
+import { useAlert } from "react-alert";
 import "./style.scss";
 
 const Register = () => {
@@ -76,12 +76,17 @@ const Register = () => {
       .then((res) => {
         setData(res.data);
         console.log(res.data);
-        alert.success('Thank you! You have been Registered!')
+        alert.success("Thank you! You have been Registered!");
         setTimeout(() => {
           window.location = "/";
         }, 2000);
       })
       .catch((err) => console.log(err));
+  };
+
+  const toLogin = () => {
+    navigate("/login");
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -158,7 +163,7 @@ const Register = () => {
             <input type="submit" value="Register" className="btn" />
             <input
               readOnly
-              onClick={() => navigate("/login")}
+              onClick={() => toLogin()}
               value="Already Have An Account ! SignIn"
               className="btn noselect back"
             />

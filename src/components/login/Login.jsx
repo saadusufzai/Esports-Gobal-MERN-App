@@ -1,8 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import React,{useState} from "react";
+import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
-import {useAlert} from "react-alert"
+import { useAlert } from "react-alert";
+
 
 import { rules } from "../rules/rules";
 import "./login.scss";
@@ -13,23 +13,21 @@ export const tokenconfig = (getState) => {
   const config = {
     headers: {
       "content-type": "application/json",
-    }
+    },
   };
 
   // if token, add to header
   if (token) {
-    config.headers['x-auth-token'] = token
+    config.headers["x-auth-token"] = token;
   }
   return config;
 };
-const Login = ({user,setUser}) => {
+const Login = ({ user, setUser, setIsAuthenticated }) => {
   const [type, setType] = useState(false);
   const [phone, setPhone] = useState();
   const [password, setPassword] = useState();
-
+  const navigate = useNavigate();
   const alert = useAlert();
-
- 
 
   const onChangePhone = (e) => {
     setPhone(e.target.value);
@@ -56,12 +54,21 @@ const Login = ({user,setUser}) => {
     axios
       .post("https://esports-global.herokuapp.com/api/auth/login", data, config)
       .then((res) => {
-        alert.success('You Have Been Logged In')
-        setUser(res.data.user) 
-        console.log(res.data);
+        alert.success("You Have Been Logged In");
+
         localStorage.setItem("token", res.data.token);
+        setUser(res.data.user);
+        setIsAuthenticated(true);
+        navigate(`/login/${res.data.user.id}`);
+        // setTimeout(() => {
+         
+        // },2000)
+        
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        alert.error("Invalid credentials");
+      });
   };
 
   return (
@@ -101,7 +108,7 @@ const Login = ({user,setUser}) => {
             <input type="submit" value="Sign In" className="btn" />
           </div>
           <span>
-            Don't have an account? <Link to="/register">Register</Link>
+            Don't have an account? <Link onClick={() =>  window.scrollTo(0, 0)} to="/register">Register</Link>
           </span>
         </form>
       </div>

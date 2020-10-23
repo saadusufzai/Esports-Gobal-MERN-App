@@ -1,0 +1,157 @@
+.profileContainer{
+    width:90%;
+    margin:20px auto;
+    display: grid;
+    grid: 8 ;
+   
+    grid-gap: 20px;
+}
+
+.profileContainer .left{
+    grid-column: 1 / 2;
+    box-shadow: 1px 1px 10px black;
+    margin: 10px;
+    border-top: 8px solid red;
+    border-radius: 5px;
+}
+
+.profileContainer .left .avatar{
+    
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.profileContainer .left .avatar img{
+    width: 200px;
+    margin-bottom: 10px;
+
+}
+.profileContainer .left .avatar p{
+    margin-top: 10px;
+
+}
+.profileContainer .left .avatar h2{
+    margin-top: 10px;
+
+}
+
+/* long column right side */
+
+.profileContainer .right{
+    grid-column: 2 / 8;
+    box-shadow: 1px 1px 10px black;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 20px;
+    border-top: 30px solid rgb(255, 115, 0);
+    position: relative;
+}
+
+.profileContainer .right .feeStatus{
+    cursor:help  ;
+    position: absolute;
+    z-index: 2;
+    right: 10em;
+    background-color: red;
+    display: inline-block;
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+.profileContainer .right .feeStatus:hover{
+    opacity: 0.9 ;
+}
+
+
+.profileContainer .right .edit{
+    position: absolute;
+    z-index: 2;
+    right: 30px;
+    cursor: pointer;
+    background-color: rgb(18, 179, 253);
+    display: inline-block;
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.profileContainer .right .edit:hover{
+    opacity: 0.9 ;
+}
+
+
+.profileContainer .right .edit i {
+    margin-left: 5px;
+}
+
+
+.profileContainer .right .about{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profileContainer .right .about i{
+    margin-right: 10px;
+}
+
+.profileContainer .right .info{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.profileContainer .right ul{
+  list-style: none;
+}
+
+.profileContainer .right ul li{
+    display:flex;
+    align-items: center;
+    margin: 40px 0;
+}
+.profileContainer .right ul li p{
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+
+@media(max-width: 768px){
+    .profileContainer {
+        
+    }
+
+
+    .profileContainer .left .avatar img{
+        width: 130px;
+        margin-bottom: 10px;
+    
+    }
+
+    .profileContainer .left{
+        padding-bottom: 30px;
+    }
+    .profileContainer .right{
+        grid-column: 1 / 2;
+    }
+
+    .profileContainer .right ul li h3{
+        font-size: 16px;
+    }
+
+    .profileContainer .right ul li p{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    
+}

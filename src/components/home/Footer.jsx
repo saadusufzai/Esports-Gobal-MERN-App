@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -16,19 +17,19 @@ const Footer = () => {
           <ul className='links' >
             <h4>Links</h4>
             <li>
-              <a href="/">Home</a>
+              <Link onClick={() =>  window.scrollTo(0, 0)} to="/">Home</Link>
             </li>
             <li>
-              <a href="/About">About</a>
+              <Link onClick={() =>  window.scrollTo(0, 0)} to="/About">About</Link>
             </li>
             <li>
-              <a href="/Tournaments">Tournaments</a>
+              <Link onClick={() =>  window.scrollTo(0, 0)} to="/Tournaments">Tournaments</Link>
             </li>
             <li>
-              <a href="/Login">Login/Register</a>
+              <Link onClick={() =>  window.scrollTo(0, 0)} to="/Login">Login/Register</Link>
             </li>
             <li>
-              <a href="/admin/users">Users</a>
+              <Link onClick={() =>  window.scrollTo(0, 0)} to="/admin/users">Users</Link>
             </li>
           </ul>
         </div>

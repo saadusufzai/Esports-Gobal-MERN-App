@@ -233,7 +233,7 @@ footer {
     position: absolute;
     z-index: 2;
     top: 20px;
-    right: 20px;
+    right: 30px;
   }
   .header .menu-btn:hover {
     opacity: 0.8;

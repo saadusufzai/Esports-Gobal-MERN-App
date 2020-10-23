@@ -10,20 +10,13 @@ import Header from "./components/home/Header";
 import Login from "./components/login/Login";
 import Footer from "./components/home/Footer";
 import Users from "./components/admin/Users";
-
-// import { Provider } from "react-redux";
-// import store from "./flux/store";
-// import { loadUser } from "./flux/actions/authActions";
-
+import Profile from "./components/user/Profile";
 
 function App() {
-  const [user,setUser] = useState()
+  const [user, setUser] = useState();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  //   useState(()=>{
-  //     store.dispatch(loadUser());
-  //   },[])
   return (
-    // <Provider store={store}>
     <Router>
       <Header />
 
@@ -33,8 +26,22 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/tournaments" element={<Tournament />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login user={user} setUser={setUser} />} />
+          <Route
+            path="/login"
+            element={
+              <Login
+                user={user}
+                setUser={setUser}
+                isAuthenticated={isAuthenticated}
+                setIsAuthenticated={setIsAuthenticated}
+              />
+            }
+          />
           <Route path="/admin/users" element={<Users />} />
+          <Route
+            path="/login/:id"
+            element={<Profile user={user} isAuthenticated={isAuthenticated} />}
+          />
         </Routes>
       </div>
 

@@ -7,6 +7,7 @@
 - react Sass
 - classname (to conditionally join classnames)
 - react alert
+- react tooltip
 
 ### React Slick
         npm install react-slick
