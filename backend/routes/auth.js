@@ -6,7 +6,7 @@ const auth = require("../middleware/auth")
 // User Model
 const User = require("../models/user.model")
 
-const { JWT_SECRET } = config;
+const  JWT_SECRET  = process.env.JWT_SECRET
 // const router = Router();//
 
 /**
