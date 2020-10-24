@@ -56,6 +56,9 @@ const Footer = () => {
               <i className="fa fa-phone" aria-hidden="true"></i>03127507523
             </li>
             <li>
+              <i className="fa fa-phone" aria-hidden="true"></i>03356099387
+            </li>
+            <li>
               <i className="fa fa-envelope" aria-hidden="true"></i>
               esportsglobalpk@gmial.com
             </li>
