@@ -1,6 +1,6 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import classes from "./profile.module.css";
-import axios from "axios";
+
 
 import avatar1 from "../../images/avatars/1.png";
 import Login from "../login/Login";

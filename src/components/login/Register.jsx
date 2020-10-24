@@ -1,15 +1,21 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import axios from "axios";
-import { rules } from "../rules/rules";
+import { rules, rulesUrdu } from "../rules/rules";
+import ReactTooltip from 'react-tooltip';
 import { useAlert } from "react-alert";
+import { cities } from "../rules/cities";
+import { countries } from "../rules/countries";
+
 
 import "./style.scss";
 
 const Register = () => {
   const [type, setType] = useState(false);
   const [data, setData] = useState();
+  const [english ,setEnglish] = useState(true)
+
   const navigate = useNavigate();
   const alert = useAlert();
 
@@ -90,14 +96,25 @@ const Register = () => {
     window.scrollTo(0, 0);
   };
 
+const handelText= () => {
+  setEnglish(!english)
+}
+
   return (
     <div className="register">
+      <ReactTooltip/>
       <div className="left">
         <h2>RULES of the Tournament</h2>
+        <i onClick={()=> handelText()} data-tip={`To read in ${english? 'Urdu':'English'} Click here`} className="fa fa-info-circle fa-2x" aria-hidden="true"></i>
         <ul className="rule-list">
-          {rules.map((rule, key) => (
-            <li key={key}> {rule} </li>
-          ))}
+          {
+          
+      english?rules.map((rule, key) => (
+        <li key={key}> {rule} </li>
+      )) :
+      rulesUrdu.map((rule, key) => (
+        <li key={key}> {rule} </li>
+      )) }
         </ul>
       </div>
       <div className="right">
@@ -106,25 +123,40 @@ const Register = () => {
         <form onSubmit={submit}>
           <div className="form">
             <input
+              htmlFor="firstName"
               onChange={(e) => onChangeFirstName(e)}
               required
               type="text"
               placeholder="First Name *"
             />
             <input
+              htmlFor="lastName"
               onChange={(e) => onChangeLastName(e)}
               required
               type="text"
               placeholder="Last Name *"
             />
             <select value={country} onChange={(e) => onChangeCountry(e)}>
-              <option value="">Country</option>
+              <option selected="true" disabled="disabled" value="">
+                Country
+              </option>
               <option value="Pakistan">Pakistan</option>
-              <option value="India">India</option>
+              {countries.map((country) => (
+                <option key={country} value={country}>
+                  {country.name}
+                </option>
+              ))}
             </select>
             <select value={city} onChange={(e) => onChangeCity(e)}>
-              <option value="">City</option>
+              <option selected="true" disabled="disabled" value="">
+                City
+              </option>
               <option value="Bhakkar">Bhakkar</option>
+              {cities.map((city) => (
+                <option key={city} value={city}>
+                  {city}
+                </option>
+              ))}
             </select>
             <input
               onChange={(e) => onChangePubgId(e)}
@@ -132,11 +164,13 @@ const Register = () => {
               placeholder="PUBG ID"
             />
             <input
+              htmlFor="email"
               onChange={(e) => onChanegeEmail(e)}
               type="email"
               placeholder="Email"
             />
             <input
+              htmlFor="phone"
               onChange={(e) => onChangePhone(e)}
               required
               type="number"
@@ -154,9 +188,9 @@ const Register = () => {
             <input required type="checkbox" />
             <label>
               I Accept The{" "}
-              <a target="blank" href="">
+              <Link target="blank" to={'/terms&conditions'} >
                 Terms & Conditions
-              </a>
+              </Link>
             </label>
           </div>
 

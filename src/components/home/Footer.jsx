@@ -38,7 +38,10 @@ const Footer = () => {
           <ul>
             <h4>Contact Us</h4>
             <li>
-              <i className="fa fa-phone" aria-hidden="true"></i>0332877676
+              <i className="fa fa-phone" aria-hidden="true"></i>03472175563
+            </li>
+            <li>
+              <i className="fa fa-phone" aria-hidden="true"></i>03127507523
             </li>
             <li>
               <i className="fa fa-envelope" aria-hidden="true"></i>email@gmial.com

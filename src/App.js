@@ -11,6 +11,7 @@ import Login from "./components/login/Login";
 import Footer from "./components/home/Footer";
 import Users from "./components/admin/Users";
 import Profile from "./components/user/Profile";
+import Terms from "./components/rules/Terms";
 
 function App() {
   const [user, setUser] = useState();
@@ -42,6 +43,7 @@ function App() {
             path="/login/:id"
             element={<Profile user={user} isAuthenticated={isAuthenticated} />}
           />
+          <Route path="/terms&conditions" element={<Terms />} />
         </Routes>
       </div>
 

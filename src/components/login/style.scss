@@ -47,7 +47,19 @@
   height: 100%;
 
   .left {
+    position: relative;
     background: linear-gradient(rgb(221, 29, 4), rgb(247, 100, 100), rgb(255, 145, 0));
+    .fa-info-circle{
+      cursor: pointer;
+      position:absolute;
+      z-index: 2;
+      top: 10px;
+      right:30px;
+      color: #fff;
+      float: right;
+      margin: 10px 10px 10px 0px;
+     
+    }
   }
 
   .right {
@@ -117,6 +129,18 @@
 
 
 
+.urdu-btn{
+
+  color: rgb(0, 0, 0);
+  background-color:rgb(255, 145, 0);
+  display:block;
+  float:right;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 25px;
+  font-weight: 800;
+  box-shadow: 1px 1px 10px black;
+}
 // media queries
 
 @media(max-width:768px){

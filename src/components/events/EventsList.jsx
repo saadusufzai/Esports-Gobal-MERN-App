@@ -26,7 +26,7 @@ const EventsList = () => {
           <p>
             Esports Global is organizing a Solo vs Solo 1 Match PUBG Mobile
             Tournament. Any one can participate and get a chance to win 660UC or
-            1800 PKR. Top three player will win a 660UC or 1800 PKR each. The
+            1500 PKR. Top three player will win a 660UC or 1500 PKR each. The
             registration process is really simple. just Click the register
             button and thats it. Registration charges are only 200 Rs for this
             Tournament.
@@ -55,7 +55,7 @@ const EventsList = () => {
           <p>
             Esports Global is organizing a Solo vs Solo 1 Match PUBG Mobile
             Tournament. Any one can participate and get a chance to win 660UC or
-            1800 PKR. Top three player will win a 660UC or 1800 PKR each. The
+            1500 PKR. Top three player will win a 660UC or 1500 PKR each. The
             registration process is really simple. just Click the register
             button and thats it. Registration charges are only 200 Rs for this
             Tournament.
