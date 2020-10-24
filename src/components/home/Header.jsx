@@ -4,11 +4,12 @@ import "./style.css";
 import { useNavigate,Link } from "react-router-dom";
 import cx from "classname";
 
-const Header = () => {
+const Header = ({isAuthenticated,user}) => {
   const navigate = useNavigate();
   const [color, setColor] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled , setScrolled] = useState(false);
+
 
   useEffect(() => {
     window.addEventListener('scroll', handelScroll)
@@ -79,7 +80,7 @@ const Header = () => {
             <Link onClick={() =>  window.scrollTo(0, 0)} to="/tournaments">TOURNAMENTS</Link>
           </li>
           <li>
-            <Link onClick={() =>  window.scrollTo(0, 0)} to="/login">Sign In</Link>
+            <Link onClick={() =>  window.scrollTo(0, 0)} to={isAuthenticated? `/login/${user.id}` : "/login"}>{isAuthenticated? 'Profile':'Login'}</Link>
           </li>
           <li style={{ background: "red" }} className="btn">
             <Link

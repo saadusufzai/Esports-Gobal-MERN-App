@@ -2,9 +2,9 @@ import React,{useState} from "react";
 import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAlert } from "react-alert";
+import ReactTooltip from "react-tooltip";
 
-
-import { rules } from "../rules/rules";
+import { rules, rulesUrdu } from "../rules/rules";
 import "./login.scss";
 
 export const tokenconfig = (token) => {
@@ -25,10 +25,14 @@ export const tokenconfig = (token) => {
 const Login = ({ user, setUser, setIsAuthenticated }) => {
   const [type, setType] = useState(false);
   const [phone, setPhone] = useState();
+  const [english, setEnglish] = useState(true);
   const [password, setPassword] = useState();
   const navigate = useNavigate();
   const alert = useAlert();
   
+  const handelText = () => {
+    setEnglish(!english);
+  };
  
 
   const onChangePhone = (e) => {
@@ -72,12 +76,15 @@ const Login = ({ user, setUser, setIsAuthenticated }) => {
 
   return (
     <div className="register">
+      <ReactTooltip />
       <div className="left">
         <h2>RULES of the Tournament</h2>
+        <i onClick={()=> handelText()} data-tip={`To read in ${english? 'Urdu':'English'} Click here`} className="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+       
         <ul className="rule-list">
-          {rules.map((rule, key) => (
-            <li key={key}> {rule} </li>
-          ))}
+        {english
+            ? rules.map((rule, key) => <li key={key}> {rule} </li>)
+            : rulesUrdu.map((rule, key) => <li key={key}> {rule} </li>)}
         </ul>
       </div>
       <div className="right">

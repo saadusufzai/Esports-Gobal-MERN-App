@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ReactTooltip from "react-tooltip";
 
 import Home from "./components/home";
 import Tournament from "./components/tournament/Tournament";
@@ -19,8 +20,8 @@ function App() {
 
   return (
     <Router>
-      <Header />
-
+      <Header isAuthenticated={isAuthenticated} user={user} />
+      ReactTooltip
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -41,7 +42,13 @@ function App() {
           <Route path="/admin/users" element={<Users />} />
           <Route
             path="/login/:id"
-            element={<Profile user={user} isAuthenticated={isAuthenticated} />}
+            element={
+              <Profile
+                user={user}
+                isAuthenticated={isAuthenticated}
+                setIsAuthenticated={setIsAuthenticated}
+              />
+            }
           />
           <Route path="/terms&conditions" element={<Terms />} />
         </Routes>

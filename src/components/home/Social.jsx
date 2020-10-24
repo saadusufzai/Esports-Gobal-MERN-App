@@ -10,7 +10,7 @@ const Social = () => {
           <ul>
             <li>
               <a target='blank' href="https://www.facebook.com/">
-                <i style={{}}  className=" fb fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                <i  className=" fb fa fa-facebook-official fa-2x" aria-hidden="true"></i>
               </a>
             </li>
             <li>

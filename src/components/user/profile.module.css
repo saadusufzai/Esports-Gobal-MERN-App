@@ -94,6 +94,22 @@
   margin-right: 10px;
 }
 
+.profileContainer .right .logout {
+  position: absolute;
+  right: 30px;
+  bottom: 2em;
+  cursor: pointer;
+  background-color: rgb(18, 179, 253);
+  display: inline-block;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px black;
+}
+
 .profileContainer .right .info {
   width: 90%;
   margin: 0 auto;

@@ -1,39 +1,51 @@
 import React from "react";
 import "./style.css";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="inner-footer">
         <div className="about">
-            <h3>About Us</h3>
-            <p>
-            Esports Global is an Esports Company that organize online tournaments and events to boost and support the rising gamming cmmunity of Pakitan.
-            </p>
+          <h3>About Us</h3>
+          <p>
+            Esports Global is an Esports Company that organize online
+            tournaments and events to boost and support the rising gamming
+            community of Pakistan.
+          </p>
         </div>
 
         <div>
-          <ul className='links' >
+          <ul className="links">
             <h4>Links</h4>
             <li>
-              <Link onClick={() =>  window.scrollTo(0, 0)} to="/">Home</Link>
+              <Link onClick={() => window.scrollTo(0, 0)} to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link onClick={() =>  window.scrollTo(0, 0)} to="/About">About</Link>
+              <Link onClick={() => window.scrollTo(0, 0)} to="/About">
+                About
+              </Link>
             </li>
             <li>
-              <Link onClick={() =>  window.scrollTo(0, 0)} to="/Tournaments">Tournaments</Link>
+              <Link onClick={() => window.scrollTo(0, 0)} to="/Tournaments">
+                Tournaments
+              </Link>
             </li>
             <li>
-              <Link onClick={() =>  window.scrollTo(0, 0)} to="/Login">Login/Register</Link>
+              <Link onClick={() => window.scrollTo(0, 0)} to="/Login">
+                Login/Register
+              </Link>
             </li>
             <li>
-              <Link onClick={() =>  window.scrollTo(0, 0)} to="/admin/users">Users</Link>
+              <Link onClick={() => window.scrollTo(0, 0)} to="/admin/users">
+                Users
+              </Link>
             </li>
           </ul>
         </div>
-        
+
         <div className="contact">
           <ul>
             <h4>Contact Us</h4>
@@ -44,7 +56,8 @@ const Footer = () => {
               <i className="fa fa-phone" aria-hidden="true"></i>03127507523
             </li>
             <li>
-              <i className="fa fa-envelope" aria-hidden="true"></i>email@gmial.com
+              <i className="fa fa-envelope" aria-hidden="true"></i>
+              esportsglobalpk@gmial.com
             </li>
             <li>
               <i className="fa fa-external-link-square" aria-hidden="true"></i>

@@ -1,20 +1,19 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { rules, rulesUrdu } from "../rules/rules";
-import ReactTooltip from 'react-tooltip';
+import ReactTooltip from "react-tooltip";
 import { useAlert } from "react-alert";
 import { cities } from "../rules/cities";
 import { countries } from "../rules/countries";
-
 
 import "./style.scss";
 
 const Register = () => {
   const [type, setType] = useState(false);
   const [data, setData] = useState();
-  const [english ,setEnglish] = useState(true)
+  const [english, setEnglish] = useState(true);
 
   const navigate = useNavigate();
   const alert = useAlert();
@@ -96,25 +95,25 @@ const Register = () => {
     window.scrollTo(0, 0);
   };
 
-const handelText= () => {
-  setEnglish(!english)
-}
+  const handelText = () => {
+    setEnglish(!english);
+  };
 
   return (
     <div className="register">
-      <ReactTooltip/>
+      <ReactTooltip />
       <div className="left">
         <h2>RULES of the Tournament</h2>
-        <i onClick={()=> handelText()} data-tip={`To read in ${english? 'Urdu':'English'} Click here`} className="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+        <i
+          onClick={() => handelText()}
+          data-tip={`To read in ${english ? "Urdu" : "English"} Click here`}
+          className="fa fa-info-circle fa-2x"
+          aria-hidden="true"
+        ></i>
         <ul className="rule-list">
-          {
-          
-      english?rules.map((rule, key) => (
-        <li key={key}> {rule} </li>
-      )) :
-      rulesUrdu.map((rule, key) => (
-        <li key={key}> {rule} </li>
-      )) }
+          {english
+            ? rules.map((rule, key) => <li key={key}> {rule} </li>)
+            : rulesUrdu.map((rule, key) => <li key={key}> {rule} </li>)}
         </ul>
       </div>
       <div className="right">
@@ -188,7 +187,7 @@ const handelText= () => {
             <input required type="checkbox" />
             <label>
               I Accept The{" "}
-              <Link target="blank" to={'/terms&conditions'} >
+              <Link target="blank" to={"/terms&conditions"}>
                 Terms & Conditions
               </Link>
             </label>

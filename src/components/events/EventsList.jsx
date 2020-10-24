@@ -13,8 +13,9 @@ const EventsList = () => {
         <h2>Solo Vs Solo PUBG MOBILE Tournament No 1</h2>
         <div className="summary">
           <span>
-            <i className="fa fa-clock-o" aria-hidden="true"></i> will be announced
-            soon.
+          <i className="fa fa-calendar-check-o" aria-hidden="true"></i> 
+            November 1st, 2020  : 
+            <i className="fa fa-clock-o" aria-hidden="true"></i> 08:00 PM
           </span>
           <span>
             <i className="fa fa-male" aria-hidden="true"></i>VS
