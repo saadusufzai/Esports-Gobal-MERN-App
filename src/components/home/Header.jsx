@@ -25,7 +25,7 @@ const Header = ({isAuthenticated,user}) => {
     }
     
   }
-  console.log(scrolled);
+ 
 
   var menus = cx({
     menu: true,

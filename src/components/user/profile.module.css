@@ -110,6 +110,11 @@
   box-shadow: 1px 1px 5px black;
 }
 
+.profileContainer .right .logout:hover {
+  opacity: 0.9;
+}
+
+
 .profileContainer .right .info {
   width: 90%;
   margin: 0 auto;

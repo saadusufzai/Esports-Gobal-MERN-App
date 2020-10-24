@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { rules, rulesUrdu } from "../rules/rules";
+
 import ReactTooltip from "react-tooltip";
 import { useAlert } from "react-alert";
 import { cities } from "../rules/cities";

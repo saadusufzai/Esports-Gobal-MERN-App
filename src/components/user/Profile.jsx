@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import classes from "./profile.module.css";
-import {Link} from 'react-router-dom'
-
+import {Link, useNavigate} from 'react-router-dom'
+import { useAlert } from "react-alert";
 import avatar1 from "../../images/avatars/1.png";
 import Login from "../login/Login";
 import ReactTooltip from 'react-tooltip';
 
 const Profile = ({user, isAuthenticated, setIsAuthenticated }) => {
   const [status, setStatus] = useState("Pending");
+  const navigate = useNavigate();
+  const alert = useAlert();
   
   const logout = () => {
+    
     setIsAuthenticated(false);
+    
+    navigate('/');
+    alert.success('Loged out successfully!')
   }
 
 
