@@ -84,6 +84,7 @@ const Users = () => {
             <th>PUBG_ID</th>
             <th>City</th>
             <th>Registered On</th>
+            <th>Fee Status</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -96,6 +97,9 @@ const Users = () => {
               <td>{user.pubgId}</td>
               <td>{user.city}</td>
               <td>{user.register_date}</td>
+              <td style={{ 
+                color: user.feeStatus? 'Green':'red'
+              }}>{user.feeStatus? 'Submitted':'Pending'}</td>
               <td>
                 <i
                   onClick={() => deleteUser(user._id)}
