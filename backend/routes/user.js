@@ -61,21 +61,16 @@ router.get('/', async (req, res) => {
     User.findById(req.params.id)
       .then((user) => {
         
-        const password = req.password;
-        const salt =  bcrypt.genSalt(10);
-        if (!salt) throw Error("Something went wrong with bcrypt");
-
-        const hash =  bcrypt.hash(password, salt);
-        if (!hash) throw Error("Something went wrong hashing password");
 
         user.firstName = req.body.firstName;
         user.lastName = req.body.lastName;
+        user.email = req.body.email;
         user.country = req.body.country;
         user.city = req.body.city;
         user.pubgId = req.body.pubgId;
         user.phone = req.body.phone;
-        user.password = hash
-        user.date = Date.parse(req.body.date);
+        user.feeStatus = req.body.status;
+       
   
         user
           .save()

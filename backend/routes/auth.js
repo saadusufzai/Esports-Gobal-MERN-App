@@ -89,6 +89,7 @@ router.post("/users", async (req, res) => {
       city: req.body.city,
       pubgId: req.body.pubgId,
       phone: phone,
+      feeStatus:false
     });
 
     const savedUser = await newUser.save();

@@ -78,6 +78,7 @@ const Users = () => {
       <table>
         <thead>
           <tr>
+            <th>#</th>
             <th>Name</th>
             <th>Phone</th>
             <th>PUBG_ID</th>
@@ -89,6 +90,7 @@ const Users = () => {
         <tbody>
           {users.map((user, key) => (
             <tr key={key}>
+              <td>{key}</td>
               <td>{user.firstName + " " + user.lastName}</td>
               <td>{user.phone}</td>
               <td>{user.pubgId}</td>

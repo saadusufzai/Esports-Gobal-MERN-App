@@ -11,12 +11,13 @@ const userSchema = new Schema(
     email: { type: String, required: false },
     phone: { type: Number, required: true },
     password: { type: String, required: true },
-    register_date: {type: Date, default: Date.now}
+    feeStatus: { type: Boolean, required: false },
+    register_date: { type: Date, default: Date.now },
   },
   {
     timestamps: true,
   }
 );
 
-const User = mongoose.model('User', userSchema)
-module.exports = User
+const User = mongoose.model("User", userSchema);
+module.exports = User;
