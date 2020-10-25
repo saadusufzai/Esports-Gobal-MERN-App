@@ -93,7 +93,7 @@ const Users = () => {
             <tr key={key}>
               <td>{key}</td>
               <td>{user.firstName + " " + user.lastName}</td>
-              <td>{user.phone}</td>
+              <td>0{user.phone}</td>
               <td>{user.pubgId}</td>
               <td>{user.city}</td>
               <td>{user.register_date}</td>

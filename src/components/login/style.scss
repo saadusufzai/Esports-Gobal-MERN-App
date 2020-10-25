@@ -54,7 +54,7 @@
       position:absolute;
       z-index: 2;
       top: 10px;
-      right:20px;
+      right:5px;
       color: #fff;
       float: right;
       margin: 10px 10px 10px 0px;
@@ -128,7 +128,7 @@
 }
 
  input[type=submit]:focus{
- 
+  cursor: progress;
   background-color: rgb(214, 14, 14);
   animation: pulse 3s infinite;
 }

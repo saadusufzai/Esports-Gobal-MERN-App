@@ -1,10 +1,16 @@
 import React from "react";
 import "./style.css";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 import img from "../../images/pubg.jpg";
 const EventsList = () => {
   const navigate = useNavigate();
+
+  const handelOnRegister = () => {
+    window.scrollTo(0, 0);
+    navigate("/register");
+    navigate("/register");
+  };
 
   return (
     <div className="events">
@@ -13,8 +19,8 @@ const EventsList = () => {
         <h2>Solo Vs Solo PUBG MOBILE Tournament No 1</h2>
         <div className="summary">
           <span>
-          <i className="fa fa-calendar-check-o" aria-hidden="true"></i> 
-            November 1st, 2020  : 
+            <i className="fa fa-calendar-check-o" aria-hidden="true"></i>
+            November 1st, 2020 :
             <i className="fa fa-clock-o" aria-hidden="true"></i> 08:00 PM
           </span>
           <span>
@@ -33,18 +39,19 @@ const EventsList = () => {
             Tournament.
           </p>
         </div>
-        <div onClick={() => navigate('/register')} className="btn">
+        <div onClick={() => handelOnRegister()} className="btn">
           REGISTER NOW
         </div>
       </div>
       <hr />
-      <br/><br/>
+      <br />
+      <br />
       <div className="inner-events">
         <h2>Solo Vs Solo PUBG MOBILE Tournament No 2</h2>
         <div className="summary">
           <span>
-            <i className="fa fa-clock-o" aria-hidden="true"></i> will be announced
-            soon.
+            <i className="fa fa-clock-o" aria-hidden="true"></i> will be
+            announced soon.
           </span>
           <span>
             <i className="fa fa-male" aria-hidden="true"></i>VS
@@ -62,7 +69,7 @@ const EventsList = () => {
             Tournament.
           </p>
         </div>
-        <div onClick={() => navigate('/register')} className="btn">
+        <div onClick={() => handelOnRegister()} className="btn">
           REGISTER NOW
         </div>
       </div>
