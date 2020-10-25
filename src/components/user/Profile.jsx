@@ -1,34 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./profile.module.css";
-import {Link, useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from "react-router-dom";
 import { useAlert } from "react-alert";
 import avatar1 from "../../images/avatars/1.png";
-import Login from "../login/Login";
-import ReactTooltip from 'react-tooltip';
+import ReactTooltip from "react-tooltip";
+import axios from "axios";
+import cx from "classname";
 
-const Profile = ({user, isAuthenticated, setIsAuthenticated }) => {
-  const [status, setStatus] = useState("Pending");
+const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
+  const [status, setStatus] = useState(false);
   const navigate = useNavigate();
   const alert = useAlert();
-  
+  const id = user.id || "5f93b7e8e7f82900172f1211";
+
+
   const logout = () => {
-    
     setIsAuthenticated(false);
-    
-    navigate('/');
-    alert.success('Loged out successfully!')
-  }
+    navigate("/");
+    alert.success("Loged out successfully!");
+  };
+
+  useEffect(() => {
+    axios
+      .get(`https://esports-global.herokuapp.com/api/users/${id}`)
+      .then((res) => setStatus(res.data.feeStatus))
+      .catch((err) => console.log(err));
+  }, []);
+
+
+  
+  var feeStatus = cx({
+    green: status,
+    feeStatus:true
+  });
 
 
   if (isAuthenticated) {
     return (
       <div className={classes.profileContainer}>
-        <ReactTooltip/>
+        <ReactTooltip />
         <div className={classes.left}>
           <div className={classes.avatar}>
             <img src={avatar1} alt="avatar" />
             <h2 className="name">
-              {user.firstName} {user.lastName} 
+              {user.firstName} {user.lastName}
             </h2>
             <p>
               {" "}
@@ -37,14 +52,23 @@ const Profile = ({user, isAuthenticated, setIsAuthenticated }) => {
           </div>
         </div>
         <div className={classes.right}>
-            
-          <div  data-tip="Submit Fee in order to participate in the Upcoming PUBG Tournament" className={classes.feeStatus}>
-            Fee Status <p>{status}</p>
+          <div
+          
+            data-tip={
+              status
+                ? `Hepefully ${user.firstName} you are in our WhatsApp Group if not You will soon be added in the official WhatsApp Group`
+                : "Submit Fee in order to participate in the Upcoming PUBG Tournament"
+            }
+            className={classes.feeStatus}
+            style={{backgroundColor: status ? 'green':'red'}}
+          >
+            {status ? "You have been" : "Fee Status"}{" "}
+            <p>{status ? "Registered" : "Pending"}</p>
           </div>
-          <div data-tip="Will be Updated Soon" className={classes.edit}>
+          <div data-tip="This feature will be Updated Soon" className={classes.edit}>
             Edit <i className="fa fa-pencil" aria-hidden="true"></i>
           </div>
-          <div onClick={() =>logout()} className={classes.logout}>
+          <div onClick={() => logout()} className={classes.logout}>
             Logout <i className="fa fa-sign-out" aria-hidden="true"></i>
           </div>
 
@@ -90,9 +114,16 @@ const Profile = ({user, isAuthenticated, setIsAuthenticated }) => {
   } else {
     return (
       <div>
-       <h1>You have been successfully logged out <br/>
-       <br/>
-       click <Link style={{color: 'rgb(0,0,0)',  fontStyle:'italic'}} to="/"> HERE</Link> to return to HOME page  </h1>
+        <h1>
+          You have been successfully logged out <br />
+          <br />
+          click{" "}
+          <Link style={{ color: "rgb(0,0,0)", fontStyle: "italic" }} to="/">
+            {" "}
+            HERE
+          </Link>{" "}
+          to return to HOME page{" "}
+        </h1>
       </div>
     );
   }

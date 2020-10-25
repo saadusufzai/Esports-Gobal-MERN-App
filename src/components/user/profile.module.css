@@ -97,7 +97,7 @@
 .profileContainer .right .logout {
   position: absolute;
   right: 30px;
-  bottom: 2em;
+  bottom: 1em;
   cursor: pointer;
   background-color: rgb(18, 179, 253);
   display: inline-block;
@@ -114,6 +114,9 @@
   opacity: 0.9;
 }
 
+.profileContainer .right .green{
+  background-color: green;
+}
 
 .profileContainer .right .info {
   width: 90%;
