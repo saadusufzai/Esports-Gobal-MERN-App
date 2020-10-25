@@ -45,7 +45,6 @@ router.route("/login").post( async (req, res) => {
         email: user.email,
         country: user.country,
         city: user.city,
-        feeStatus: user.feeStatus,
       },
     });
   } catch (err) {
