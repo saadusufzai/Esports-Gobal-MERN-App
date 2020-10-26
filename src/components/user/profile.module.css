@@ -94,8 +94,13 @@
   margin-right: 10px;
 }
 
+.profileContainer .right .bottomBtn {
+  display: flex;
+  justify-content: space-between
+}
+
 .profileContainer .right .logout {
-  position: absolute;
+  /* position: absolute; */
   right: 30px;
   bottom: 1em;
   cursor: pointer;
@@ -103,6 +108,7 @@
   display: inline-block;
   padding: 5px 15px;
   color: #fff;
+  margin-left :10px;
   font-size: 14px;
   text-align: center;
   font-weight: 600;
@@ -115,7 +121,7 @@
 }
 
 .profileContainer .right .easypaisa{
-  position: absolute;
+  /* position: absolute; */
   left: 20px;
   bottom: 1em;
   cursor: pointer;

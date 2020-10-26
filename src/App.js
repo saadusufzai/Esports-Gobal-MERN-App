@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       <Header isAuthenticated={isAuthenticated} user={user} />
-      ReactTooltip
+      <ReactTooltip/>
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />

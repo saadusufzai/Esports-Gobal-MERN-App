@@ -13,7 +13,6 @@ const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
   const alert = useAlert();
   const id = user.id || "5f93b7e8e7f82900172f1211";
 
-
   const logout = () => {
     setIsAuthenticated(false);
     navigate("/");
@@ -27,13 +26,10 @@ const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
       .catch((err) => console.log(err));
   }, []);
 
-
-  
   var feeStatus = cx({
     green: status,
-    feeStatus:true
+    feeStatus: true,
   });
-
 
   if (isAuthenticated) {
     return (
@@ -53,26 +49,22 @@ const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
         </div>
         <div className={classes.right}>
           <div
-          
             data-tip={
               status
                 ? `Hepefully ${user.firstName} you are in our WhatsApp Group if not You will soon be added in the official WhatsApp Group`
                 : "Submit Rs.200 on 03472175563 Easiy Paisa Account to participate in the Upcoming PUBG Tournament"
             }
             className={classes.feeStatus}
-            style={{backgroundColor: status ? 'green':'red'}}
+            style={{ backgroundColor: status ? "green" : "red" }}
           >
             {status ? "You have been" : "Fee Status"}{" "}
             <p>{status ? "Registered" : "Pending"}</p>
           </div>
-          <div data-tip="This feature will be Updated Soon" className={classes.edit}>
+          <div
+            data-tip="This feature will be Updated Soon"
+            className={classes.edit}
+          >
             Edit <i className="fa fa-pencil" aria-hidden="true"></i>
-          </div>
-          <div onClick={() => logout()} className={classes.logout}>
-            Logout <i className="fa fa-sign-out" aria-hidden="true"></i>
-          </div>
-          <div data-tip="Do Not Submit fee on any other Number but this!" onClick={() => logout()} className={classes.easypaisa}>
-            EasyPaisa Account: 03472175563 
           </div>
 
           <div className={classes.about}>
@@ -110,6 +102,18 @@ const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
                 <p>0{user.phone}</p>
               </li>
             </ul>
+          </div>
+          <div className={classes.bottomBtn}>
+            <div
+              data-tip="Do Not Submit fee on any other Number but this!"
+              onClick={() => logout()}
+              className={classes.easypaisa}
+            >
+              EasyPaisa Account: 03472175563
+            </div>
+            <div onClick={() => logout()} className={classes.logout}>
+              Logout <i className="fa fa-sign-out" aria-hidden="true"></i>
+            </div>
           </div>
         </div>
       </div>
