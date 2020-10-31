@@ -4,7 +4,7 @@ import './terms.css'
 const Disclaimer = () => {
   return (
     <div className="disclaimer">
-      <h2 style={{textAlign: 'center', paddingTop:'1.5em'}}>
+      <h2 style={{textAlign: 'center'}}>
         <b>DISCLAIMER</b>
       </h2>
       <p>

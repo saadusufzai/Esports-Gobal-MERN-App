@@ -11,10 +11,32 @@
     padding: 20px;
 }
 
-.conditions p{
+.conditions p, .disclaimer p , .privacy-policy p{
     line-height: 1.5em;
     margin-bottom: 10px;
 }
-.conditions ul {
+.conditions ul, .privacy-policy ul {
     padding: 5px 0 5px 30px;
+}
+
+.disclaimer{
+    width: 85%;
+    text-align: justify;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px black ;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 2em;
+    margin-bottom: 10px;
+}
+
+.privacy-policy{
+    width: 85%;
+    text-align: justify;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px black ;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 2em;
+    margin-bottom: 10px;
 }

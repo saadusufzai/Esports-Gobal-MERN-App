@@ -2,8 +2,8 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div id="privacy-policy">
-      <h2 style={{textAlign: 'center'}}>
+    <div className="privacy-policy">
+      <h2 style={{ textAlign: "center" }}>
         <b>PRIVACY POLICY</b>
       </h2>
       <p>
@@ -112,11 +112,13 @@ const PrivacyPolicy = () => {
         identify you (<b>“Personal Data”</b>). Personally identifiable
         information may include, but is not limited to:
       </p>
-      <p>0.1. Email address</p>
-      <p>0.2. First name and last name</p>
-      <p>0.3. Phone number</p>
-      <p>0.4. Address, Country, State, Province, ZIP/Postal code, City</p>
-      <p>0.5. Cookies and Usage Data</p>
+      <ul style={{ listStyle: "none" }}>
+        <li>0.1. Email address</li>
+        <li>0.2. First name and last name</li>
+        <li>0.3. Phone number</li>
+        <li>0.4. Address, Country, State, Province, ZIP/Postal code, City</li>
+        <li>0.5. Cookies and Usage Data</li>
+      </ul>
       <p>
         We may use your Personal Data to contact you with newsletters, marketing
         or promotional materials and other information that may be of interest
@@ -166,22 +168,25 @@ const PrivacyPolicy = () => {
         not be able to use some portions of our Service.
       </p>
       <p>Examples of Cookies we use:</p>
-      <p>
-        0.1. <b>Session Cookies:</b> We use Session Cookies to operate our
-        Service.
-      </p>
-      <p>
-        0.2. <b>Preference Cookies:</b> We use Preference Cookies to remember
-        your preferences and various settings.
-      </p>
-      <p>
-        0.3. <b>Security Cookies:</b> We use Security Cookies for security
-        purposes.
-      </p>
-      <p>
-        0.4. <b>Advertising Cookies:</b> Advertising Cookies are used to serve
-        you with advertisements that may be relevant to you and your interests.
-      </p>
+      <ul style={{ listStyle: "none" }}>
+        <li>
+          0.1. <b>Session Cookies:</b> We use Session Cookies to operate our
+          Service.
+        </li>
+        <li>
+          0.2. <b>Preference Cookies:</b> We use Preference Cookies to remember
+          your preferences and various settings.
+        </li>
+        <li>
+          0.3. <b>Security Cookies:</b> We use Security Cookies for security
+          purposes.
+        </li>
+        <li>
+          0.4. <b>Advertising Cookies:</b> Advertising Cookies are used to serve
+          you with advertisements that may be relevant to you and your
+          interests.
+        </li>
+      </ul>
       <p>
         <b>Other Data</b>
       </p>
@@ -202,43 +207,46 @@ const PrivacyPolicy = () => {
         <span className="num">5</span>. <b>Use of Data</b>
       </p>
       <p>
-        <span className="company-name">Esports Global</span> uses the collected data
-        for various purposes:
+        <span className="company-name">Esports Global</span> uses the collected
+        data for various purposes:
       </p>
-      <p>0.1. to provide and maintain our Service;</p>
-      <p>0.2. to notify you about changes to our Service;</p>
-      <p>
-        0.3. to allow you to participate in interactive features of our Service
-        when you choose to do so;
-      </p>
-      <p>0.4. to provide customer support;</p>
-      <p>
-        0.5. to gather analysis or valuable information so that we can improve
-        our Service;
-      </p>
-      <p>0.6. to monitor the usage of our Service;</p>
-      <p>0.7. to detect, prevent and address technical issues;</p>
-      <p>0.8. to fulfil any other purpose for which you provide it;</p>
-      <p>
-        0.9. to carry out our obligations and enforce our rights arising from
-        any contracts entered into between you and us, including for billing and
-        collection;
-      </p>
-      <p>
-        0.10. to provide you with notices about your account and/or
-        subscription, including expiration and renewal notices,
-        email-instructions, etc.;
-      </p>
-      <p>
-        0.11. to provide you with news, special offers and general information
-        about other goods, services and events which we offer that are similar
-        to those that you have already purchased or enquired about unless you
-        have opted not to receive such information;
-      </p>
-      <p>
-        0.12. in any other way we may describe when you provide the information;
-      </p>
-      <p>0.13. for any other purpose with your consent.</p>
+      <ul style={{ listStyle: "none" }}>
+        <li>0.1. to provide and maintain our Service;</li>
+        <li>0.2. to notify you about changes to our Service;</li>
+        <li>
+          0.3. to allow you to participate in interactive features of our
+          Service when you choose to do so;
+        </li>
+        <li>0.4. to provide customer support;</li>
+        <li>
+          0.5. to gather analysis or valuable information so that we can improve
+          our Service;
+        </li>
+        <li>0.6. to monitor the usage of our Service;</li>
+        <li>0.7. to detect, prevent and address technical issues;</li>
+        <li>0.8. to fulfil any other purpose for which you provide it;</li>
+        <li>
+          0.9. to carry out our obligations and enforce our rights arising from
+          any contracts entered into between you and us, including for billing
+          and collection;
+        </li>
+        <li>
+          0.10. to provide you with notices about your account and/or
+          subscription, including expiration and renewal notices,
+          email-instructions, etc.;
+        </li>
+        <li>
+          0.11. to provide you with news, special offers and general information
+          about other goods, services and events which we offer that are similar
+          to those that you have already purchased or enquired about unless you
+          have opted not to receive such information;
+        </li>
+        <li>
+          0.12. in any other way we may describe when you provide the
+          information;
+        </li>
+        <li>0.13. for any other purpose with your consent.</li>
+      </ul>
       <p>
         <span className="num">6</span>. <b>Retention of Data</b>
       </p>
@@ -269,20 +277,20 @@ const PrivacyPolicy = () => {
       <p>
         If you are located outside <span className="country-name">USA</span> and
         choose to provide information to us, please note that we transfer the
-        data, including Personal Data, to <span className="country-name">USA</span>{" "}
-        and process it there.
+        data, including Personal Data, to{" "}
+        <span className="country-name">USA</span> and process it there.
       </p>
       <p>
         Your consent to this Privacy Policy followed by your submission of such
         information represents your agreement to that transfer.
       </p>
       <p>
-        <span className="company-name">Esports Global</span> will take all the steps
-        reasonably necessary to ensure that your data is treated securely and in
-        accordance with this Privacy Policy and no transfer of your Personal
-        Data will take place to an organisation or a country unless there are
-        adequate controls in place including the security of your data and other
-        personal information.
+        <span className="company-name">Esports Global</span> will take all the
+        steps reasonably necessary to ensure that your data is treated securely
+        and in accordance with this Privacy Policy and no transfer of your
+        Personal Data will take place to an organisation or a country unless
+        there are adequate controls in place including the security of your data
+        and other personal information.
       </p>
       <p>
         <span className="num">8</span>. <b>Disclosure of Data</b>
@@ -291,44 +299,46 @@ const PrivacyPolicy = () => {
         We may disclose personal information that we collect, or you provide:
       </p>
       <div id="disclosure">
-        <p>
+       <ul style={{ listStyle: "none" }}>
+       <li>
           0.1. <b>Disclosure for Law Enforcement.</b>
-        </p>
-        <p>
+        </li>
+        <li>
           Under certain circumstances, we may be required to disclose your
           Personal Data if required to do so by law or in response to valid
           requests by public authorities.
-        </p>
-        <p>
+        </li>
+        <li>
           0.2. <b>Business Transaction.</b>
-        </p>
-        <p>
+        </li>
+        <li>
           If we or our subsidiaries are involved in a merger, acquisition or
           asset sale, your Personal Data may be transferred.
-        </p>
-        <p>
+        </li>
+        <li>
           0.3. <b>Other cases. We may disclose your information also:</b>
-        </p>
-        <p>0.3.1. to our subsidiaries and affiliates;</p>
-        <p>
+        </li>
+        <li>0.3.1. to our subsidiaries and affiliates;</li>
+        <li>
           0.3.2. to contractors, service providers, and other third parties we
           use to support our business;
-        </p>
-        <p>0.3.3. to fulfill the purpose for which you provide it;</p>
-        <p>
+        </li>
+        <li>0.3.3. to fulfill the purpose for which you provide it;</li>
+        <li>
           0.3.4. for the purpose of including your company’s logo on our
           website;
-        </p>
-        <p>
+        </li>
+        <li>
           0.3.5. for any other purpose disclosed by us when you provide the
           information;
-        </p>
-        <p>0.3.6. with your consent in any other cases;</p>
-        <p>
+        </li>
+        <li>0.3.6. with your consent in any other cases;</li>
+        <li>
           0.3.7. if we believe disclosure is necessary or appropriate to protect
           the rights, property, or safety of the Company, our customers, or
           others.
-        </p>
+        </li>
+       </ul>
       </div>
       <p>
         <span className="num">9</span>. <b>Security of Data</b>
@@ -366,51 +376,53 @@ const PrivacyPolicy = () => {
       <p>
         In certain circumstances, you have the following data protection rights:
       </p>
-      <p>
+      <ul style={{ listStyle: "none" }}>
+      <li>
         0.1. the right to access, update or to delete the information we have on
         you;
-      </p>
-      <p>
+      </li>
+      <li>
         0.2. the right of rectification. You have the right to have your
         information rectified if that information is inaccurate or incomplete;
-      </p>
-      <p>
+      </li>
+      <li>
         0.3. the right to object. You have the right to object to our processing
         of your Personal Data;
-      </p>
-      <p>
+      </li>
+      <li>
         0.4. the right of restriction. You have the right to request that we
         restrict the processing of your personal information;
-      </p>
-      <p>
+      </li>
+      <li>
         0.5. the right to data portability. You have the right to be provided
         with a copy of your Personal Data in a structured, machine-readable and
         commonly used format;
-      </p>
-      <p>
+      </li>
+      <li>
         0.6. the right to withdraw consent. You also have the right to withdraw
         your consent at any time where we rely on your consent to process your
         personal information;
-      </p>
-      <p>
+      </li>
+      </ul>
+      <li>
         Please note that we may ask you to verify your identity before
         responding to such requests. Please note, we may not able to provide
         Service without some necessary data.
-      </p>
-      <p>
+      </li>
+      <li>
         You have the right to complain to a Data Protection Authority about our
         collection and use of your Personal Data. For more information, please
         contact your local data protection authority in the European Economic
         Area (EEA).
-      </p>
-      <p>
+      </li>
+      <li>
         <span className="num">11</span>.{" "}
         <b>
           Your Data Protection Rights under the California Privacy Protection
           Act (CalOPPA)
         </b>
-      </p>
-      <p>
+      </li>
+      <li>
         CalOPPA is the first state law in the nation to require commercial
         websites and online services to post a privacy policy. The law’s reach
         stretches well beyond California to require a person or company in the
@@ -419,25 +431,27 @@ const PrivacyPolicy = () => {
         to post a conspicuous privacy policy on its website stating exactly the
         information being collected and those individuals with whom it is being
         shared, and to comply with this policy.
-      </p>
+      </li>
       <p>According to CalOPPA we agree to the following:</p>
-      <p>0.1. users can visit our site anonymously;</p>
-      <p>
+     <ul style={{ listStyle: "none" }}>
+     <li>0.1. users can visit our site anonymously;</li>
+      <li>
         0.2. our Privacy Policy link includes the word “Privacy”, and can easily
         be found on the home page of our website;
-      </p>
-      <p>
+      </li>
+      <li>
         0.3. users will be notified of any privacy policy changes on our Privacy
         Policy Page;
-      </p>
-      <p>
+      </li>
+      <li>
         0.4. users are able to change their personal information by emailing us
         at{" "}
         <b>
           <span className="email">esportsglobalpk@gmail.com</span>
         </b>
         .
-      </p>
+      </li>
+     </ul>
       <p>Our Policy on “Do Not Track” Signals:</p>
       <p>
         We honor Do Not Track signals and do not track, plant cookies, or use
@@ -468,36 +482,39 @@ const PrivacyPolicy = () => {
           request, we will return to you:
         </b>
       </p>
-      <p>
+     <ul style={{ listStyle: "none" }}>
+     
+      <li>
         0.0.1. The categories of personal information we have collected about
         you.
-      </p>
-      <p>
+      </li>
+      <li>
         0.0.2. The categories of sources from which we collect your personal
         information.
-      </p>
-      <p>
+      </li>
+      <li>
         0.0.3. The business or commercial purpose for collecting or selling your
         personal information.
-      </p>
-      <p>
+      </li>
+      <li>
         0.0.4. The categories of third parties with whom we share personal
         information.
-      </p>
-      <p>
+      </li>
+      <li>
         0.0.5. The specific pieces of personal information we have collected
         about you.
-      </p>
-      <p>
+      </li>
+      <li>
         0.0.6. A list of categories of personal information that we have sold,
         along with the category of any other company we sold it to. If we have
         not sold your personal information, we will inform you of that fact.
-      </p>
-      <p>
+      </li>
+      <li>
         0.0.7. A list of categories of personal information that we have
         disclosed for a business purpose, along with the category of any other
         company we shared it with.
-      </p>
+      </li>
+     </ul>
       <p>
         Please note, you are entitled to ask us to provide you with this
         information up to two times in a rolling twelve-month period. When you
@@ -604,20 +621,7 @@ const PrivacyPolicy = () => {
         We have no control over and assume no responsibility for the content,
         privacy policies or practices of any third party sites or services.
       </p>
-      <p>
-        For example, the outlined{" "}
-        <a href="https://policymaker.io/privacy-policy/">privacy policy</a> has
-        been made using <a href="https://policymaker.io/">PolicyMaker.io</a>, a
-        free tool that helps create high-quality legal documents. PolicyMaker’s{" "}
-        <a href="https://policymaker.io/privacy-policy/">
-          privacy policy generator
-        </a>{" "}
-        is an easy-to-use tool for creating a{" "}
-        <a href="https://policymaker.io/blog-privacy-policy/">
-          privacy policy for blog
-        </a>
-        , website, e-commerce store or mobile app.
-      </p>
+     
       <p>
         <span className="num">18</span>.{" "}
         <b>
