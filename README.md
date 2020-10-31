@@ -21,3 +21,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 ## Link
 https://esportsglobal.netlify.app/
+
+## Backend
+- Node Express Backend
+- REST API
+- MONGO DB
