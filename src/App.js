@@ -13,6 +13,8 @@ import Footer from "./components/home/Footer";
 import Users from "./components/admin/Users";
 import Profile from "./components/user/Profile";
 import Terms from "./components/rules/Terms";
+import Disclaimer from "./components/rules/Disclaimer";
+import PrivacyPolicy from "./components/rules/PrivacyPolicy";
 
 function App() {
   const [user, setUser] = useState();
@@ -51,6 +53,8 @@ function App() {
             }
           />
           <Route path="/terms&conditions" element={<Terms />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
 

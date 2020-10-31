@@ -18,29 +18,26 @@ const Footer = () => {
         <div>
           <ul className="links">
             <h4>Links</h4>
-            <li>
-              <Link onClick={() => window.scrollTo(0, 0)} to="/">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link onClick={() => window.scrollTo(0, 0)} to="/About">
-                About
-              </Link>
-            </li>
+            
             <li>
               <Link onClick={() => window.scrollTo(0, 0)} to="/Tournaments">
                 Tournaments
               </Link>
             </li>
-            <li>
-              <Link onClick={() => window.scrollTo(0, 0)} to="/Login">
-                Login/Register
-              </Link>
-            </li>
+      
             <li>
               <Link onClick={() => window.scrollTo(0, 0)} to="/admin/users">
                 Users
+              </Link>
+            </li>
+            <li>
+              <Link onClick={() => window.scrollTo(0, 0)} to="/disclaimer">
+                Disclaimer
+              </Link>
+            </li>
+            <li>
+              <Link onClick={() => window.scrollTo(0, 0)} to="/privacy-policy">
+                Privacy Policy
               </Link>
             </li>
           </ul>
