@@ -47,11 +47,12 @@ const EventsList = () => {
       <br />
       <br />
       <div className="inner-events">
-        <h2>Solo Vs Solo PUBG MOBILE Tournament No 2</h2>
+        <h2>Solo Vs Solo PUBG MOBILE FREE Tournament </h2>
         <div className="summary">
           <span>
-            <i className="fa fa-clock-o" aria-hidden="true"></i> will be
-            announced soon.
+          <i className="fa fa-calendar-check-o" aria-hidden="true"></i>
+            November 8, 2020 :
+            <i className="fa fa-clock-o" aria-hidden="true"></i> 08:00 PM
           </span>
           <span>
             <i className="fa fa-male" aria-hidden="true"></i>VS
@@ -63,10 +64,9 @@ const EventsList = () => {
           <p>
             Esports Global is organizing a Solo vs Solo 1 Match PUBG Mobile
             Tournament. Any one can participate and get a chance to win 660UC or
-            1500 PKR. Top three player will win a 660UC or 1500 PKR each. The
+            1500 PKR. Top player will win a 660UC or 1500 PKR. The
             registration process is really simple. just Click the register
-            button and thats it. Registration charges are only 200 Rs for this
-            Tournament.
+            button and thats it.This tournament is FREE, No Registration charges.
           </p>
         </div>
         <div onClick={() => handelOnRegister()} className="btn">

@@ -3,6 +3,7 @@ import Carousel from "./Carousel";
 import Events from "../events/Events";
 import LiveStream from "./LiveStream";
 import Social from "./Social";
+import Sponsors from './Sponsors';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Events />
       <LiveStream />
       <Social />
+      <Sponsors />
     </div>
   );
 };
