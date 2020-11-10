@@ -55,7 +55,7 @@ const Login = ({ user, setUser, setIsAuthenticated }) => {
     const config = tokenconfig(localStorage.getItem('token'))
 
     axios
-      .post("https://esports-global.herokuapp.com/api/auth/login", data, config)
+      .post("https://esports-global.herokuapp.com/api/auth/login/squad", data, config)
       .then((res) => {
         alert.success("You Have Been Logged In");
 

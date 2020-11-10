@@ -92,13 +92,13 @@ const Register = () => {
     };
     // 
     axios
-      .post("https://esports-global.herokuapp.com/api/auth/users", user, config)
+      .post("https://esports-global.herokuapp.com/api/auth/squad", user, config)
       .then((res) => {
         setData(res.data);
         console.log(res.data);
-        alert.success("Thank you! You have been Registered!");
+        alert.success("Thank you! Your Squad is Registered!");
         setTimeout(() => {
-          // window.location = "/";
+          window.location = "/";
         }, 2000);
       })
       .catch((err) => console.log(err));

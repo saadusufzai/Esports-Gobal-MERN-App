@@ -5,7 +5,7 @@ import { useAlert } from "react-alert";
 import avatar1 from "../../images/avatars/1.png";
 import ReactTooltip from "react-tooltip";
 import axios from "axios";
-import cx from "classname";
+
 
 const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
   const [status, setStatus] = useState(false);
@@ -21,15 +21,12 @@ const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
 
   useEffect(() => {
     axios
-      .get(`https://esports-global.herokuapp.com/api/users/${id}`)
+      .get(`https://esports-global.herokuapp.com/api/squad/${id}`)
       .then((res) => setStatus(res.data.feeStatus))
       .catch((err) => console.log(err));
   }, []);
 
-  var feeStatus = cx({
-    green: status,
-    feeStatus: true,
-  });
+ 
 
   if (isAuthenticated) {
     return (
@@ -75,16 +72,19 @@ const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
           <div className={classes.info}>
             <ul>
               <li>
-                <h3>First Name:</h3>
+                <h3>Team Leader:</h3>
                 <p>{user.firstName}</p>
               </li>
-              <li>
-                <h3>Last Name:</h3>
-                <p>{user.lastName}</p>
-              </li>
+              
               <li>
                 <h3>City:</h3>
                 <p>{user.city}</p>
+              </li>
+              <li>
+                <h3>Team Members:</h3>
+                <p> {user.player2} </p>
+                <p> {user.player3} </p>
+                <p> {user.player4} </p>
               </li>
             </ul>
 
@@ -93,10 +93,7 @@ const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
                 <h3>Country:</h3>
                 <p>{user.country}</p>
               </li>
-              <li>
-                <h3>PUBG ID:</h3>
-                <p>{user.pubgId}</p>
-              </li>
+              
               <li>
                 <h3>Phone:</h3>
                 <p>0{user.phone}</p>
