@@ -101,7 +101,7 @@ const Register = () => {
     };
     // 
     axios
-      .post("https://esports-global.herokuapp/api/auth/users", user, config)
+      .post("https://esports-global.herokuapp.com/api/auth/users", user, config)
       .then((res) => {
         setData(res.data);
         console.log(res.data);
