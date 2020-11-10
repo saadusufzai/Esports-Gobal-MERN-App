@@ -151,24 +151,24 @@ const Register = () => {
               type="text"
               placeholder="Team Leader Name *"
             />
-            <select value={country} onChange={(e) => onChangeCountry(e)}>
-              <option selected={true} disabled="disabled">
+            <select  onChange={(e) => onChangeCountry(e)}>
+              <option value="country" selected={true} disabled="disabled">
                 Country
               </option>
               <option value="Pakistan">Pakistan</option>
-              {countries.map((country) => (
-                <option key={country} value={country.name}>
+              {countries.map((country,ind) => (
+                <option key={ind} value={country.name}>
                   {country.name}
                 </option>
               ))}
             </select>
-            <select value={city} onChange={(e) => onChangeCity(e)}>
-              <option selected={true} disabled="disabled" value="">
+            <select  onChange={(e) => onChangeCity(e)}>
+            <option value="country" selected={true} disabled="disabled">
                 City
               </option>
               <option value="Bhakkar">Bhakkar</option>
-              {cities.map((city) => (
-                <option key={city} value={city}>
+              {cities.map((city,ind) => (
+                <option key={ind} value={city}>
                   {city}
                 </option>
               ))}
