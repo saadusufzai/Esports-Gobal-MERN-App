@@ -52,7 +52,7 @@ const Profile = ({ user, isAuthenticated, setIsAuthenticated }) => {
             data-tip={
               status
                 ? `Hepefully ${user.firstName} you are in our WhatsApp Group if not You will soon be added in the official WhatsApp Group`
-                : "Submit Rs.200 on 03472175563 Easiy Paisa Account to participate in the Upcoming PUBG Tournament"
+                : "Submit Rs.800 on 03472175563 Easiy Paisa Account to participate in the Upcoming PUBG Tournament"
             }
             className={classes.feeStatus}
             style={{ backgroundColor: status ? "green" : "red" }}

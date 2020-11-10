@@ -59,20 +59,21 @@ router.route("/login").post( async (req, res) => {
  */
 
 router.post("/users", async (req, res) => {
-  const { firstName, lastName, phone, password,email } = req.body;
+  const { firstName, phone, password } = req.body;
 
   // Validation
 
-  if (!firstName || !lastName || !phone || !password) {
+  if (!firstName || !phone || !password) {
     return res.status(400).json({ msg: "Please enter all feilds" });
   }
 
   try {
     const phoneN = await User.findOne({ phone});
-    if (phoneN) throw Error("PhoneNumber already exists");
+    if (phoneN) return res.status(400).json({ msg:"Phone Number already exists"});
 
-    const emailN = await User.findOne({ email });
-    if (emailN) throw Error("Email already exists");
+    // const emailN = await User.findOne({ email });
+    // if (emailN)  return res.status(400).json({ msg:"Phone Number already exists"});
+
 
     const salt = await bcrypt.genSalt(10);
     if (!salt) throw Error("Something went wrong with bcrypt");
@@ -82,13 +83,16 @@ router.post("/users", async (req, res) => {
 
     const newUser = new User({
       firstName: firstName,
-      lastName: lastName,
-      email: req.body.email,
-      password: hash,
+      player2:req.body.player2,
+      player3:req.body.player3,
+      player4:req.body.player4,
+      phone: phone,
       country: req.body.country,
       city: req.body.city,
-      pubgId: req.body.pubgId,
-      phone: phone,
+      password: hash,
+      // pubgId: req.body.pubgId,
+      // lastName: lastName,
+      // email: req.body.email,
       feeStatus:false
     });
 
@@ -103,9 +107,12 @@ router.post("/users", async (req, res) => {
       token,
       user: {
         id: savedUser._id,
-        name: savedUser.name,
-        email: savedUser.email,
-        pubgId: savedUser.pubgId,
+        name: savedUser.firstName,
+        team:{ 
+            player2:savedUser.player2
+        },
+        // email: savedUser.email,
+        // pubgId: savedUser.pubgId,
         phone: savedUser.phone,
       },
     });

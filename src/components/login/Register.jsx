@@ -18,34 +18,46 @@ const Register = () => {
 
   const navigate = useNavigate();
   const alert = useAlert();
-
+  // const [lastName, setLastName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [pubgId, setPubgId] = useState();
+  
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+  const [player2, setPlayer2] = useState("");
+  const [player3, setPlayer3] = useState("");
+  const [player4, setPlayer4] = useState("");
   const [country, setCountry] = useState("");
   const [city, setCity] = useState("");
-  const [pubgId, setPubgId] = useState();
-  const [phone, setPhone] = useState();
   const [password, setPassword] = useState("");
-
+  const [phone, setPhone] = useState();
+  
   const onChangeFirstName = (e) => {
     setFirstName(e.target.value);
   };
-  const onChangeLastName = (e) => {
-    setLastName(e.target.value);
+  const onChangePlayer2 = (e) => {
+    setPlayer2(e.target.value);
   };
-  const onChanegeEmail = (e) => {
-    setEmail(e.target.value);
+  const onChangePlayer3 = (e) => {
+    setPlayer3(e.target.value);
   };
+  const onChangePlayer4 = (e) => {
+    setPlayer4(e.target.value);
+  };
+
+  // const onChanegeEmail = (e) => {
+  //   setEmail(e.target.value);
+  // };
+
   const onChangeCountry = (e) => {
     setCountry(e.target.value);
   };
   const onChangeCity = (e) => {
     setCity(e.target.value);
   };
-  const onChangePubgId = (e) => {
-    setPubgId(e.target.value);
-  };
+
+  // const onChangePubgId = (e) => {
+  //   setPubgId(e.target.value);
+  // };
 
   const onChangePhone = (e) => {
     setPhone(e.target.value);
@@ -56,16 +68,26 @@ const Register = () => {
   };
 
   const submit = (e) => {
+    console.log(
+      firstName,
+      player2,
+      player3,
+      player4,
+      country,
+      city,
+      phone,
+      password,
+    );
     e.preventDefault();
 
     // Request body
     const user = JSON.stringify({
       firstName,
-      lastName,
+      player2,
+      player3,
+      player4,
       country,
       city,
-      pubgId,
-      email,
       phone,
       password,
     });
@@ -77,9 +99,9 @@ const Register = () => {
         "Access-Control-Allow-Origin": "*",
       },
     };
-
+    // 
     axios
-      .post("https://esports-global.herokuapp.com/api/auth/users", user, config)
+      .post("https://esports-global.herokuapp/api/auth/users", user, config)
       .then((res) => {
         setData(res.data);
         console.log(res.data);
@@ -118,26 +140,19 @@ const Register = () => {
         </ul>
       </div>
       <div className="right">
-        <h2>Create Your Account</h2>
-        <p>To Register For The Tournaments</p>
+        <h2>Register Your Squad</h2>
+        <p>Only one member will enter the info</p>
         <form onSubmit={submit}>
           <div className="form">
             <input
-              htmlFor="firstName"
+              htmlFor="leaderName"
               onChange={(e) => onChangeFirstName(e)}
               required
               type="text"
-              placeholder="First Name *"
-            />
-            <input
-              htmlFor="lastName"
-              onChange={(e) => onChangeLastName(e)}
-              required
-              type="text"
-              placeholder="Last Name *"
+              placeholder="Team Leader Name *"
             />
             <select value={country} onChange={(e) => onChangeCountry(e)}>
-              <option selected="true" disabled="disabled" value="">
+              <option selected={true} disabled="disabled">
                 Country
               </option>
               <option value="Pakistan">Pakistan</option>
@@ -148,7 +163,7 @@ const Register = () => {
               ))}
             </select>
             <select value={city} onChange={(e) => onChangeCity(e)}>
-              <option selected="true" disabled="disabled" value="">
+              <option selected={true} disabled="disabled" value="">
                 City
               </option>
               <option value="Bhakkar">Bhakkar</option>
@@ -158,17 +173,6 @@ const Register = () => {
                 </option>
               ))}
             </select>
-            <input
-              onChange={(e) => onChangePubgId(e)}
-              type="number"
-              placeholder="PUBG ID"
-            />
-            <input
-              htmlFor="email"
-              onChange={(e) => onChanegeEmail(e)}
-              type="email"
-              placeholder="Email"
-            />
             <input
               htmlFor="phone"
               onChange={(e) => onChangePhone(e)}
@@ -182,6 +186,30 @@ const Register = () => {
               onClick={() => setType(true)}
               type={type ? "password" : "text"}
               placeholder="Password *"
+            />
+            <label htmlFor="TEAM_INFO" value='TEAM INFO'> Squad Information</label>
+
+
+            <input
+              htmlFor="player2"
+              onChange={(e) => onChangePlayer2(e)}
+              
+              type="text"
+              placeholder="Player 2"
+            />
+            <input
+              htmlFor="player3"
+              onChange={(e) => onChangePlayer3(e)}
+              
+              type="text"
+              placeholder="Player 3"
+            />
+            <input
+              htmlFor="player4"
+              onChange={(e) => onChangePlayer4(e)}
+              
+              type="text"
+              placeholder="Player 4"
             />
           </div>
           <div className="checkbox">
