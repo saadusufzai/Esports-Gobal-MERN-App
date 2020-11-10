@@ -25,10 +25,12 @@ app.use(express.json());
 // routes
 const userRoutes = require("./routes/user");
 const authRoutes = require("./routes/auth");
+const squadRoutes = require("./routes/squad");
 
 // Use Routes
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/squad", squadRoutes);
 
 
 

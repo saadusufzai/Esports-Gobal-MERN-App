@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema(
+const squadSchema = new Schema(
   {
     firstName: { type: String, required: true },
     player2: { type: String, required: false },
@@ -22,5 +22,5 @@ const userSchema = new Schema(
   }
 );
 
-const User = mongoose.model("User", userSchema);
-module.exports = User;
+const Squad = mongoose.model("Squad", squadSchema);
+module.exports = Squad;

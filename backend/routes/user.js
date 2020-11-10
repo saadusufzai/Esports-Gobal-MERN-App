@@ -63,11 +63,11 @@ router.get('/', async (req, res) => {
         
 
         user.firstName = req.body.firstName;
-        user.player2 = req.body.player2;
-        user.player3 = req.body.player3;
-        user.player4 = req.body.player4;
+        user.lastName = req.body.lastName;
+        user.email = req.body.email;
         user.country = req.body.country;
         user.city = req.body.city;
+        user.pubgId = req.body.pubgId;
         user.phone = req.body.phone;
         user.feeStatus = req.body.status;
        

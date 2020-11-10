@@ -93,7 +93,7 @@ const Users = () => {
           {users.map((user, key) => (
             <tr key={key}>
               <td>{key}</td>
-              <td>{user.firstName + " " + user.lastName}</td>
+              <td>{user.firstName}</td>
               <td>0{user.phone}</td>
               <td>{user.pubgId}</td>
               <td>{user.city}</td>

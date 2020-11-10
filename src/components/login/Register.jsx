@@ -68,16 +68,7 @@ const Register = () => {
   };
 
   const submit = (e) => {
-    console.log(
-      firstName,
-      player2,
-      player3,
-      player4,
-      country,
-      city,
-      phone,
-      password,
-    );
+   
     e.preventDefault();
 
     // Request body
@@ -107,7 +98,7 @@ const Register = () => {
         console.log(res.data);
         alert.success("Thank you! You have been Registered!");
         setTimeout(() => {
-          window.location = "/";
+          // window.location = "/";
         }, 2000);
       })
       .catch((err) => console.log(err));
