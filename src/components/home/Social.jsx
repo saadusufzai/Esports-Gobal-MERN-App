@@ -25,7 +25,7 @@ const Social = () => {
               </a>
             </li>
             <li>
-              <a data-tip="03472175563" target='blank' href="https://www.web.whatsapp.com/">
+              <a data-tip="03472175563" target='blank' href="https://web.whatsapp.com/">
                 <i className="wa fa fa-whatsapp fa-2x" aria-hidden="true"></i>
                 
               </a>

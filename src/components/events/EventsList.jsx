@@ -21,7 +21,7 @@ const EventsList = () => {
           <span>
             <i className="fa fa-calendar-check-o" aria-hidden="true"></i>
             November 15, 2020 :
-            <i className="fa fa-clock-o" aria-hidden="true"></i> will be accounced later
+            <i className="fa fa-clock-o" aria-hidden="true"></i> 08:30 PM
           </span>
           <span>
             <i className="fa fa-users" aria-hidden="true"></i>VS

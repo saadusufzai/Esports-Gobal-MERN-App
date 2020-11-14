@@ -229,7 +229,7 @@ footer {
 }
 
 .sponsors .our-sponsors ul{
-  width: 70%;
+  width: 80%;
   margin:0 auto;
   padding: 20px 0;
   display: flex;
@@ -403,12 +403,33 @@ footer {
     width: 100%;
   }
 
+  
   .sponsors .our-sponsors ul{
-    width: 95%;
+    width: 100%;
   }
   .sponsors .our-sponsors ul li{
     width: 50%;
     font-size: 14px;
     text-align: center;
   }
+}
+
+@media(max-width: 480px ){
+  .sponsors {
+    margin-bottom: 0;
+   
+  }
+  .sponsors .our-sponsors ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+     
+  }
+
+  .sponsors .our-sponsors ul li a {
+  
+    font-size: 16px;
+
+}
 }
