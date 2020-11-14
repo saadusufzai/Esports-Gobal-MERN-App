@@ -141,7 +141,7 @@ const Users = () => {
               <td>0{user.phone}</td>
               <td>{user.player2} | {user.player3} | {user.player4}</td>
               <td>{user.city}</td>
-              <td>{[dayjs(user.register_date).toDate().toUTCString()]}</td>
+              <td>{[dayjs(user.register_date).toDate().toLocaleDateString()]}, {[dayjs(user.register_date).toDate().toLocaleTimeString()]}</td>
               <td style={{ 
                 color: user.feeStatus? 'Green':'red'
               }}>{user.feeStatus? 'Submitted':'Pending'}</td>
