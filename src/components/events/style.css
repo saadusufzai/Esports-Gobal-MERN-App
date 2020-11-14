@@ -98,7 +98,7 @@
     
   }
   .inner-events{
-      width:90%;
+      width:100%;
       height: auto;
 
   }
@@ -113,6 +113,7 @@
     align-items: center;
     margin-bottom: 30px;
     font-size: 12px;
+    padding: 5px;
   }
   
   .inner-events p {
