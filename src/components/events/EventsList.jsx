@@ -16,7 +16,7 @@ const EventsList = () => {
     <div className="events">
       <h1>Events</h1>
       <div className="inner-events">
-        <h2>Squad Vs Squad PUBG MOBILE Tournament </h2>
+        <h2>Squad Vs Squad PUBG MOBILE 1 MATCH BATTLE </h2>
         <div className="summary">
           <span>
             <i className="fa fa-calendar-check-o" aria-hidden="true"></i>
@@ -32,10 +32,11 @@ const EventsList = () => {
           <img src={img} alt="pubg" />
           <p>
             Esports Global is organizing a Squad vs Squad 1 Match PUBG Mobile
-            Tournament.Only Mobile players can participate can participate and get a chance to win 6000 PKR. The
+            Battle.Only Mobile players can participate can participate and get a chance to Win 5000 PKR. The
+            2nd team will be rewarded 2000Rs and the third team will be rewarded 500Rs. (Entry Returned)
             registration process is really simple. just Click the register
-            button and thats it. Registration charges are only 800Rs (200 per/member) for this
-            Tournament.
+            button and register your squad NOW!. Registration charges are only 500Rs for this
+            Match.
           </p>
         </div>
         <div onClick={() => handelOnRegister()} className="btn">
