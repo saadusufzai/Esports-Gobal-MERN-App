@@ -20,7 +20,7 @@ const EventsList = () => {
         <div className="summary">
           <span>
             <i className="fa fa-calendar-check-o" aria-hidden="true"></i>
-            November 22, 2020 :
+            February 24, 2021 :
             <i className="fa fa-clock-o" aria-hidden="true"></i> 09:15 PM
           </span>
           <span>
@@ -32,8 +32,7 @@ const EventsList = () => {
           <img src={img} alt="pubg" />
           <p>
             Esports Global is organizing a Squad vs Squad 1 Match PUBG Mobile
-            Battle.Only Mobile players can participate can participate and get a chance to Win 5000 PKR. The
-            2nd team will be rewarded 2000Rs and the third team will be rewarded 500Rs. (Entry Returned)
+            Battle.Only Mobile players can participate can participate and get a chance to Win 5000 PKR.
             registration process is really simple. just Click the register
             button and register your squad NOW!. Registration charges are only 500Rs for this
             Match.

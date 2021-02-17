@@ -20,8 +20,8 @@ export const SoloPaidrules = [
 export const rules = [ 
     "This is a ONE MATCH TOURNAMENT",
     "Only Mobile Playes are Allowed to participate in Tournament. ",
-    "There is 800Rs registeration Fee for this PUBG Mobile Squad tournamet.",
-    "Only the top ( No 1 ) player will get the reward of 6000Rs PKR.",
+    "There is 500Rs registeration Fee for this PUBG Mobile Squad tournamet.",
+    "Only the top ( No 1 ) player will get the reward of 5000Rs PKR.",
     "If any team is unable to join the room within the given time. Esports Global will not be accountable for that.",
     "There will be no Re-Match",
     "Tournament will be streamed and recorded online. TEAM UP IS NOT ALLOWED.",
