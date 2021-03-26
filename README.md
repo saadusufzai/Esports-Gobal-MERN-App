@@ -1,5 +1,8 @@
 # eSports Gloal Frontend using React
 
+## Feel Free to use the code, im open for any pull requests and suggestios . Dont forget to give me a start 
+
+
 ## Tools Used
 - ReactJs
 - React Router v6
